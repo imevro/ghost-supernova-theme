@@ -56,11 +56,23 @@ module.exports = function(grunt) {
       },
     },
 
+    autoprefixer: {
+      options: ['last 1 version'],
+      dist: {
+        files: [{
+          expand: true,
+          cwd: 'assets/dist/styles/',
+          src: '{,*/}*.css',
+          dest: 'assets/dist/styles/'
+        }]
+      }
+    },
+
     // Simple config to run sass, jshint and uglify any time a js or sass file is added, modified or deleted
     watch: {
       sass: {
         files: ['assets/src/styles/{,*/}*.scss'],
-        tasks: ['sass:server']
+        tasks: ['sass:server', 'autoprefixer']
       },
       jshint: {
         files: ['<%= jshint.files %>'],
@@ -83,6 +95,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Default tasks
-  grunt.registerTask('default', ['jshint', 'concat', 'sass:dist', 'uglify']);
-  grunt.registerTask('serve', ['sass:server', 'concat', 'watch']);
+  grunt.registerTask('default', ['jshint', 'concat', 'sass:dist', 'autoprefixer', 'uglify']);
+  grunt.registerTask('serve', ['sass:server', 'autoprefixer', 'concat', 'watch']);
 };
