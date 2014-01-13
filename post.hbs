@@ -1,0 +1,65 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+<article class="{{post_class}}">
+  <div class="col-xs-12">
+    {{#post}}
+      <div class="row">
+        <div class="col-sm-2">
+          <h3>
+            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+          </h3>
+        </div>
+        <div class="col-sm-8">
+          <section class="post-content">
+            <h3 class="post-title">{{{title}}}</h3>
+            {{content}}
+          </section>
+        </div>
+      </div> <!-- .row -->
+
+      <footer class="post-footer">
+        <div class="row">
+          <div class="col-sm-2">
+            <section class="post-share">
+              <h4>Share this post</h4>
+              <a class="fa fa-twitter fa-social" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                  <span class="hidden">Twitter</span>
+              </a>
+              <a class="fa fa-facebook fa-social" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                  onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                  <span class="hidden">Facebook</span>
+              </a>
+              <a class="fa fa-google-plus fa-social" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                 onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                  <span class="hidden">Google+</span>
+              </a>
+            </section>
+          </div>
+          <div class="col-sm-8">
+            <section class="post-author">
+              <div class="row">
+                <div class="col-xs-2">
+                  <img src="{{author.image}}" class="post-author-image" alt="">
+                </div>
+                <div class="col-xs-10">
+                  <h4>{{author.name}}</h4>
+                  <p>{{author.bio}}</p>                
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </footer>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="disqus_thread"></div>
+        </div>
+      </div>
+    {{/post}}
+  </div>  
+</article>

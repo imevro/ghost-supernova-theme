@@ -1,0 +1,26 @@
+{
+  "name": "Supernova",
+  "version": "0.1.0",
+  "description": "Eugene Rodionov's theme for Ghost",
+  "author": {
+    "name": "Eugene Rodionov",
+    "email": "npm@theaqua.im",
+    "url": "http://theaqua.im"
+  },
+  "homepage": "http://theaqua.im",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theaqua/Supernova.ghost.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.7.2",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-contrib-clean": "~0.5.0",
+    "grunt-sass": "",
+    "grunt-autoprefixer": ""
+  }
+}

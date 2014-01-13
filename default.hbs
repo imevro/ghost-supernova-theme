@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{! Document Settings }}
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    {{! Page Meta }}
+    <title>{{meta_title}}</title>
+    <meta name="description" content="{{meta_description}}">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
+
+    {{! Styles'n'Scripts }}
+    <link rel="stylesheet" href="{{asset "components/normalize-css/normalize.css"}}">
+    <link rel="stylesheet" href="{{asset "components/bootstrap/dist/css/bootstrap.min.css"}}">
+    <link rel="stylesheet" href="{{asset "components/font-awesome/css/font-awesome.min.css"}}">
+    <link rel="stylesheet" href="{{asset "dist/styles/supernova.css"}}">
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,cyrillic">
+
+    {{! Ghost outputs important style and meta data with this tag }}
+    {{ghost_head}}
+  </head>
+  <body class="{{body_class}}">
+    <div class="wrapper">
+      {{! The big featured header on the homepage, with the site logo and description }}
+      <header class="jumbotron" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 text-center">
+              {{#if @blog.logo}}
+                <a class="blog-image" href="{{@blog.url}}">
+                  <img src="{{@blog.logo}}" alt="{{@blog.title}}">
+                </a>
+              {{/if}}
+              <h1>
+                <a href="{{@blog.url}}">
+                  {{@blog.title}}
+                </a>
+              </h1>
+              <p>{{@blog.description}}</p>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        {{! Everything else gets inserted here }}
+        {{{body}}}
+      </div>
+    </div> <!-- .wrapper -->
+
+{{!--     <footer class="main-footer">
+      <div class="container">
+        <div class="col-xs-12">
+          <p>
+            <a href="{{@blog.url}}/rss/">RSS</a>
+          </p>
+          <p>
+            <a href="{{@blog.url}}/">{{@blog.title}}</a>
+          </p>
+          <p>
+            Proudly published with <a href="http://ghost.org">Ghost</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+ --}}
+    {{! Ghost outputs important scripts and data with this tag }}
+    {{ghost_foot}}
+
+    {{! The main JavaScript file for Starter }}
+    <script src="{{asset "dist/scripts/starter.js"}}"></script>
+  </body>
+</html>
