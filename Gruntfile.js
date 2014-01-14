@@ -22,7 +22,7 @@ module.exports = function(grunt) {
       },
       dist: {
         src: ['assets/src/scripts/{,*/}*.js'],
-        dest: 'assets/dist/scripts/starter.js'
+        dest: 'assets/dist/scripts/supernova.js'
       },
     },
 
@@ -33,7 +33,7 @@ module.exports = function(grunt) {
       },
       dist: {
           files: {
-            'assets/dist/scripts/starter.js': ['<%= concat.dist.dest %>']
+            'assets/dist/scripts/supernova.js': ['<%= concat.dist.dest %>']
           }
         }
     },
