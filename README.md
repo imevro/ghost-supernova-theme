@@ -17,8 +17,7 @@ Started as [Starter.ghost][3]
  - Don't forget change Twitter username in ``default.hbs`` (footer) and disqus shortname in ``supernova.js``
  
 ### License
-Creative Commons Attribution NonCommercial NoDerivs (CC-NC-ND)
-I will change license when I finished.
+CC-NC-SA. You can't sell, but you can use in commercial services (ads including).
 
   [1]: http://gm4.in/i/fgy.png
   [2]: http://libsass.org/
