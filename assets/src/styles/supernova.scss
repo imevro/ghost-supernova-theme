@@ -18,6 +18,11 @@ a {
   }
 }
 
+h1, h2, h3 {
+  font-weight: 400;
+  font-family: $serif;
+}
+
 h4, h5, h6 {
   font-weight: 700;
   font-family: $serif;
