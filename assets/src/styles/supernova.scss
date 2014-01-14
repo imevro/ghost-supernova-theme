@@ -1,30 +1,11 @@
 
 @import "variables";
+@import "ghost";
+@import "experiments";
 
-// Sticky footer
-html,
+// Global
 body {
-  height: 100%;
-}
-
-.wrapper {
-  min-height: 100%;
-  height: auto;
-  margin: 0 auto (-($footer-height + $footer-margin)); // Negative indent footer by its height
-  // padding-bottom: $footer-height + $footer-margin; // Pad bottom by footer height
-  padding-bottom: 2em;
-}
-
-.main-footer {
-  background: rgb(238, 238, 238);
-  height: $footer-height;
-  padding: 1em 0;
-  margin-top: $footer-margin;
-}
-
-// Define
-body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $sans-serif;
 }
 
 a {
@@ -39,94 +20,7 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
-  font-family: Georgia, Palatino, Times, "Times New Roman", serif;
-}
-
-// Post
-.post-content {
-  font-family: Georgia, Palatino, Times, "Times New Roman", serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-
-  p {
-    margin-bottom: 2em;
-
-    &.post-tags {
-      font-size: .8em;
-      color: rgb(153, 153, 153);
-
-      margin-top: -2em;
-    }
-  }
-}
-
-.post-footer {
-  border-top: 1px solid rgb(238, 238, 238);
-  margin-top: 2em;
-  padding: 1em 0;
-
-  .fa-social {
-    font-size: 2em;
-    margin-right: 1em;
-    transition: border, color .3s;
-
-    &.fa-facebook {
-      color: rgb(72, 99, 174);
-    }
-
-    &.fa-twitter {
-      color: rgb(70, 192, 251);
-    }
-
-    &.fa-google-plus {
-      color: rgb(221, 75, 57);
-    }
-  }
-}
-
-.post-author {
-  .post-author-image {
-    max-height: 100px;
-    border-radius: 50%;
-  }
-}
-
-/* Pagination */
-
-.pagination {
-  position: relative;
-  width: 80%;
-  max-width: 700px;
-  margin: 4rem auto;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.3rem;
-  color: $gray;
-  text-align: center;
-
-  a {
-    color: $gray;
-  }
-
-  .older-posts,
-  .newer-posts {
-    position: absolute;
-    display: inline-block;
-    text-decoration: none;
-  }
-
-  .older-posts {
-    right: 0;
-  }
-
-  .page-number {
-    display: inline-block;
-    padding: 2px 0;
-  }
-
-  .newer-posts {
-    left: 0;
-  }
+  font-family: $serif;
 }
 
 // Header
@@ -135,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 1px solid $lightgray;
   
   &, h1 {
-    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: $sans-serif;
     font-weight: 400;
   }
 
@@ -158,31 +52,40 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.home-template {
-  .fadeInUp {
-    animation-name: fadeInUp;
-    animation-fill-mode: both;
-    animation-delay: .4s;
-    animation-duration: .4s;
+// Sticky footer
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  height: auto;
+  margin: 0 auto (-($footer-height + $footer-margin)); // Negative indent footer by its height
+  padding-bottom: $footer-height + $footer-margin; // Pad bottom by footer height
+  // padding-bottom: 2em;
+}
+
+.main-footer {
+  height: $footer-height;
+  padding: 1em 0;
+  margin-top: $footer-margin;
+  border-top: 1px solid $lightgray;
+  color: $gray;
+
+  a {
+    color: lighten($blue, 10%);
+
+    &:hover {
+      color: $blue;
+    }
   }
 }
 
 // Experiments
-@keyframes fadeInUp { 
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -moz-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    -o-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY();
-    -moz-transform: translateY();
-    -ms-transform: translateY();
-    -o-transform: translateY();
-    transform: translateY();
-  }
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-fill-mode: both;
+  animation-delay: .4s;
+  animation-duration: .4s;
 }

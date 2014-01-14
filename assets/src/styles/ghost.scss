@@ -1,0 +1,95 @@
+// Post
+.post-content {
+  font-family: $serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+
+  p {
+    margin-bottom: 2em;
+  }
+}
+
+.post-featured-marker {
+  color: $gold;
+  display: none;
+}
+
+.post {
+  &.featured {
+    .post-featured-marker {
+      display: block;
+    }
+  }
+}
+
+.post-tags {
+  font-size: .9em;
+  color: rgb(153, 153, 153);
+}
+
+.post-footer {
+  border-top: 1px solid rgb(238, 238, 238);
+  margin-top: 2em;
+  padding: 1em 0;
+
+  .fa-social {
+    font-size: 2em;
+    margin-right: 1em;
+    transition: border, color .3s;
+
+    &.fa-facebook {
+      color: rgb(72, 99, 174);
+    }
+
+    &.fa-twitter {
+      color: rgb(70, 192, 251);
+    }
+
+    &.fa-google-plus {
+      color: rgb(221, 75, 57);
+    }
+  }
+}
+
+.post-author {
+  .post-author-image {
+    max-height: 100px;
+    border-radius: 50%;
+  }
+}
+
+// Pagination (wow, Ghost render template on backend!)
+.pagination {
+  position: relative;
+  width: 100%;
+  margin: 1em auto;
+  font-family: $sans-serif;
+  font-size: .9em;
+  color: $gray;
+  text-align: center;
+
+  a {
+    color: $gray;
+  }
+
+  .older-posts,
+  .newer-posts {
+    position: absolute;
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  .older-posts {
+    right: 0;
+  }
+
+  .page-number {
+    display: inline-block;
+    padding: 2px 0;
+  }
+
+  .newer-posts {
+    left: 0;
+  }
+}

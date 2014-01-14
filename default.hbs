@@ -50,27 +50,35 @@
       </header>
 
       <div class="container">
-        {{! Everything else gets inserted here }}
-        {{{body}}}
+        {{{body}}} {{! Everything else gets inserted here }}
       </div>
     </div> <!-- .wrapper -->
 
-{{!--     <footer class="main-footer">
+    <footer class="main-footer">
       <div class="container">
-        <div class="col-xs-12">
+        <div class="col-sm-2">
           <p>
-            <a href="{{@blog.url}}/rss/">RSS</a>
+            <a href="{{@blog.url}}/rss/">
+              <i class="fa fa-rss"></i>
+            </a>
           </p>
           <p>
+            <a href="//twitter.com/justusebrain">
+              <i class="fa fa-twitter"></i> justusebrain
+            </a>
+          </p>
+        </div>
+        <div class="col-sm-8">
+          <p>
+            {{!-- All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved. --}}
             <a href="{{@blog.url}}/">{{@blog.title}}</a>
           </p>
           <p>
-            Proudly published with <a href="http://ghost.org">Ghost</a>
-          </p>
+            Proudly published with <a href="http://ghost.org">Ghost</a> (design: <a href="https://github.com/theaqua/Supernova.ghost">Supernova</a>).</p>
         </div>
       </div>
     </footer>
- --}}
+
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
