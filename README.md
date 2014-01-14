@@ -14,7 +14,7 @@ Started as [Starter.ghost][3]
  - In Ghost's settings change "Theme" preference, restart Ghost (yes, I'm serious)
  - Go to ``/content/themes/Supernova.ghost``, make ``npm install && bower install``
  - Run ``grunt serve`` (for live compiling ``.scss`` files and concat ``.js`` files) or ``grunt`` for build
- — Don't forget change Twitter username in ``default.hbs`` (footer)
+ - Don't forget change Twitter username in ``default.hbs`` (footer) and disqus shortname in ``supernova.js``
  
 ### License
 Creative Commons Attribution NonCommercial NoDerivs (CC-NC-ND)
