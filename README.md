@@ -20,5 +20,6 @@ Started as [Starter.ghost][3]
 Creative Commons Attribution NonCommercial NoDerivs (CC-NC-ND)
 I will change license when I finished.
 
+  [1]: http://gm4.in/i/fgy.png
   [2]: http://libsass.org/
   [3]: https://github.com/theaqua/Starter.ghost
