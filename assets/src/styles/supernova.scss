@@ -10,7 +10,7 @@ body {
 
 a {
   color: $blue;
-  transition: color .3s;
+  transition: all .3s;
 
   &:hover {
     text-decoration: none;
@@ -29,8 +29,10 @@ h4, h5, h6 {
 }
 
 // Header
-.jumbotron {
-  background: $white;
+.blog-cover {
+  background-color: $white;
+  background-position: center;
+  background-size: cover;
   border-bottom: 1px solid $lightgray;
   
   &, h1 {
@@ -49,10 +51,24 @@ h4, h5, h6 {
   }
 
   .blog-image {
+    display: block;
+
     img {
       max-height: 200px;
       border-radius: 50%;
-      border: 1px solid $lightgray;
+    }
+  }
+
+  &.covered {
+    color: $white;
+    padding: 10em 0 5em 0;
+
+    &, h1 {
+      font-family: $serif;
+    }
+
+    .blog-cover-content {
+      text-align: left;
     }
   }
 }

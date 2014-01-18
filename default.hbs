@@ -29,21 +29,21 @@
   <body class="{{body_class}}">
     <div class="wrapper">
       {{! The big featured header on the homepage, with the site logo and description }}
-      <header class="jumbotron" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+      <header class="jumbotron blog-cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} id="blog-cover">
         <div class="container">
           <div class="row">
-            <div class="col-xs-12 text-center">
+            <div class="col-sm-8 col-sm-offset-2 text-center blog-cover-content fadeInUp" id="blog-cover-content">
               {{#if @blog.logo}}
-                <a class="blog-image" href="{{@blog.url}}">
+                <a class="blog-image" href="{{@blog.url}}" id="blog-image">
                   <img src="{{@blog.logo}}" alt="{{@blog.title}}">
                 </a>
               {{/if}}
-              <h1>
+              <h1 class="blog-title" id="blog-title">
                 <a href="{{@blog.url}}">
                   {{@blog.title}}
                 </a>
               </h1>
-              <p>{{@blog.description}}</p>
+              <p class="blog-subtitle" id="blog-subtitle">{{@blog.description}}</p>
             </div>
           </div>
         </div>

@@ -3,18 +3,18 @@
 {{! The comment above "< default" means - insert everything in this file into
     the {body} of the default.hbs template, which contains our header/footer. }}
 
-<article class="{{post_class}}">
+<article class="{{post_class}} fadeInUp">
   <div class="col-xs-12">
     {{#post}}
       <div class="row">
         <div class="col-sm-2">
           <h3>
-            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+            <time datetime="{{date format='YYYY-MM-DD'}}" id="post-date">{{date format="DD MMM YYYY"}}</time>
           </h3>
         </div>
         <div class="col-sm-8">
           <section class="post-content">
-            <h3 class="post-title">{{{title}}}</h3>
+            <h3 class="post-title" id="post-title">{{{title}}}</h3>
             {{content}}
           </section>
         </div>
