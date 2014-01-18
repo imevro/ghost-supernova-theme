@@ -51,18 +51,34 @@
   .fa-social {
     font-size: 2em;
     margin-right: 1em;
-    transition: border, color .3s;
+    transition: color .3s;
+
+    &:hover {
+      border: 0;
+    }
 
     &.fa-facebook {
-      color: rgb(72, 99, 174);
+      color: $facebook-color;
+
+      &:hover {
+        color: darken($facebook-color, 20%);
+      }
     }
 
     &.fa-twitter {
-      color: rgb(70, 192, 251);
+      color: $twitter-color;
+
+      &:hover {
+        color: darken($twitter-color, 20%);
+      }
     }
 
     &.fa-google-plus {
-      color: rgb(221, 75, 57);
+      color: $gplus-color;
+
+      &:hover {
+        color: darken($gplus-color, 20%);
+      }
     }
   }
 }
