@@ -30,5 +30,5 @@ CC-NC-SA. You can't sell, but you can use in commercial services (ads including)
   [1]: http://gm4.in/i/fgy.png
   [2]: http://libsass.org/
   [3]: https://github.com/theaqua/Starter.ghost
-  [4]: http://gm4.in/i/fih.png
+  [4]: http://gm4.in/i/fii.png
   [5]: https://github.com/theaqua/Supernova.ghost/releases

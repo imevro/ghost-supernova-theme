@@ -23,6 +23,17 @@
       box-shadow: none;
     }
   }
+
+  blockquote {
+    margin-left: -25px;
+    border-color: $blue;
+    border-width: .2em;
+    font-style: italic;
+
+    p {
+      font-size: 1.1em;
+    }
+  }
 }
 
 .post-featured-marker {
