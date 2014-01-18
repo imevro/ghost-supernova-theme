@@ -13,12 +13,14 @@ var disqus_shortname = 'theaqua'; // required: replace example with your forum s
   }
 })();
 
-// Post cover
-var postCover = $('img[alt="image-cover"]');
+// Post cover. God, forgive me for jQuery, but Ghost don't have blog post cover feature
+var postCover = $('img[alt="image-cover"]'),
+    $blogCover = $('#blog-cover');
+
 if (postCover.length > 0) {
   // Add image and class .covered
-  $('#blog-cover').css('background-image', 'url(' + postCover.attr('src') + ')');
-  $("#blog-cover").addClass("covered");
+  $blogCover.css('background-image', 'url(' + postCover.attr('src') + ')');
+  $blogCover.addClass("covered");
 
   // Replace old content
   $("#blog-image").hide();
