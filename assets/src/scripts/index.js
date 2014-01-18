@@ -17,14 +17,14 @@ var disqus_shortname = 'theaqua'; // required: replace example with your forum s
 var postCover = $('img[alt="image-cover"]'),
     $blogCover = $('#blog-cover');
 
-if (postCover.length > 0) {
+if(postCover.length > 0) {
   // Add image and class .covered
   $blogCover.css('background-image', 'url(' + postCover.attr('src') + ')');
-  $blogCover.addClass("covered");
+  $blogCover.addClass('covered');
 
   // Replace old content
-  $("#blog-image").hide();
-  $("#blog-title").text($("#post-title").hide().text());
-  $("#blog-subtitle").text($("#post-date").hide().text());
+  $('#blog-image').hide();
+  $('#blog-title').text($('#post-title').hide().text());
+  $('#blog-subtitle').text($('#post-date').hide().text());
   postCover.remove();
 }
