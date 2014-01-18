@@ -30,11 +30,18 @@
     <div class="wrapper">
       {{! The big featured header on the homepage, with the site logo and description }}
       <header class="jumbotron blog-cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} id="blog-cover">
-        <div class="blog-cover-overlay"></div>
+        <div class="blog-cover-overlay">
+          <a class="blog-return-link fadeInUp" href="{{@blog.url}}">
+            {{#if @blog.logo}}
+              <img src="{{@blog.logo}}" alt="{{@blog.title}}">
+            {{/if}}
+            {{@blog.title}}
+          </a>
+        </div>
 
         <div class="container">
           <div class="row">
-            <div class="col-sm-8 col-sm-offset-2 text-center blog-cover-content fadeInUp" id="blog-cover-content">
+            <div class="col-sm-10 col-md-8 col-sm-offset-2 text-center blog-cover-content fadeInUp" id="blog-cover-content">
               {{#if @blog.logo}}
                 <a class="blog-image" href="{{@blog.url}}" id="blog-image">
                   <img src="{{@blog.logo}}" alt="{{@blog.title}}">
@@ -70,13 +77,13 @@
             </a>
           </p>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-10 col-md-8">
           <p>
             {{!-- All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved. --}}
             <a href="{{@blog.url}}/">{{@blog.title}}</a>
           </p>
           <p>
-            Proudly published with <a href="http://ghost.org">Ghost</a> (design: <a href="https://github.com/theaqua/Supernova.ghost">Supernova</a>).</p>
+            Proudly published with <a href="http://ghost.org">Ghost</a>, design: <a href="https://github.com/theaqua/Supernova.ghost" title="version 0.2">Supernova</a>.</p>
         </div>
       </div>
     </footer>
