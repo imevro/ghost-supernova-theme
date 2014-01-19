@@ -21,6 +21,7 @@ Started as [Starter.ghost][3]
  - Don't forget change Twitter username in `default.hbs` (footer) and disqus shortname in `assets/src/supernova.js`
 
 ### Development install
+ - **You must install Grunt, Bower and CoffeeScript: `npm install -g grunt bower coffee-script`**
  - Clone this repository to `/content/themes`: `git clone https://github.com/theaqua/Supernova.ghost.git Supernova` (**important:** Ghost.js have bug with dots in theme's name, you must not use `Supernova.ghost` name, only `Supernova`)
  - In Ghost's settings change "Theme" preference, restart Ghost (yes, I'm serious)
  - Go to `/content/themes/Supernova`, make `npm install && bower install`
