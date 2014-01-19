@@ -5,13 +5,18 @@ Started as [Starter.ghost][3]
 ![Supernova.ghost][1]
 
 ### Features
- - Twitter Bootstrap 3, normalize.css, Font Awesome
- - SCSS with [lib-sass][2] (written on C)
- - Grunt.js, Bower
+ - Pure design
+ - Smooth animations
+ - Covers in blog post: `![image-cover](url/to/picture.jpg)`
+ - Link to `/ghost/` in top right position
+ - And other:
+  - Twitter Bootstrap 3, normalize.css, Font Awesome
+  - SCSS with [lib-sass][2] (written on C)
+  - Grunt.js, Bower
 
 ### Install stable release
  - Just download latest [stable release][5], drop theme to `/content/themes/Supernova` and change Ghost settings.
- - Don't forget change Twitter username in `default.hbs` (footer) and disqus shortname in `supernova.js`
+ - Don't forget change Twitter username in `default.hbs` (footer) and disqus shortname in `assets/src/supernova.js`
 
 ### Development install
  - Clone this repository to `/content/themes`: `git clone https://github.com/theaqua/Supernova.ghost.git Supernova` (**important:** Ghost.js have bug with dots in theme's name, you must not use `Supernova.ghost` name, only `Supernova`)
@@ -21,15 +26,14 @@ Started as [Starter.ghost][3]
  - Don't forget change Twitter username in `default.hbs` (footer) and disqus shortname in `supernova.js`
  
 ### Tips
- - For [image cover][4] use `![image-cover](url/to/picture.jpg)`
+ - For image cover use `![image-cover](url/to/picture.jpg)`
  - For image with no border use `![no-border](url/to/picture.jpg)`
  - Layout: `.col-sm-2+.col-sm-10.col-lg-8`
 
 ### License
 CC-NC-SA. You can't sell, but you can use in commercial services (ads including).
 
-  [1]: http://gm4.in/i/fgy.png
+  [1]: http://gm4.in/i/fis.jpg
   [2]: http://libsass.org/
   [3]: https://github.com/theaqua/Starter.ghost
-  [4]: http://gm4.in/i/fii.png
   [5]: https://github.com/theaqua/Supernova.ghost/releases
