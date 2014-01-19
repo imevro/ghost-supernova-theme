@@ -15,7 +15,35 @@
   
   img {
     max-width: 100%;
-    box-shadow: 0px 0px 5px $lightgray;
+    border: 1px solid $lightgray;
+    box-shadow: .4em .4em 0 $lightgray;
+
+    &[alt="no-border"] {
+      border: 0;
+      box-shadow: none;
+    }
+  }
+
+  blockquote {
+    margin-left: -25px;
+    border-color: $blue;
+    border-width: .2em;
+    font-style: italic;
+
+    p {
+      font-size: 1.1em;
+    }
+  }
+
+  pre,
+  code {
+    background-color: rgb(41, 46, 51);
+    color: $white;
+    border: 0;
+
+    code {
+      font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    }
   }
 }
 
@@ -45,18 +73,34 @@
   .fa-social {
     font-size: 2em;
     margin-right: 1em;
-    transition: border, color .3s;
+    transition: color .3s;
+
+    &:hover {
+      border: 0;
+    }
 
     &.fa-facebook {
-      color: rgb(72, 99, 174);
+      color: $facebook-color;
+
+      &:hover {
+        color: darken($facebook-color, 20%);
+      }
     }
 
     &.fa-twitter {
-      color: rgb(70, 192, 251);
+      color: $twitter-color;
+
+      &:hover {
+        color: darken($twitter-color, 20%);
+      }
     }
 
     &.fa-google-plus {
-      color: rgb(221, 75, 57);
+      color: $gplus-color;
+
+      &:hover {
+        color: darken($gplus-color, 20%);
+      }
     }
   }
 }
