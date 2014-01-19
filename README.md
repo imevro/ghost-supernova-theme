@@ -5,7 +5,7 @@ Started as [Starter.ghost][3]
 ![Supernova.ghost][1]
 
 ### Features
- - Ghost 0.4 support
+ - Ghost 0.4 support: static pages, featured posts and other
  - Pure design
  - Smooth animations
  - Covers in blog post: `![image-cover](url/to/picture.jpg)`
@@ -18,7 +18,7 @@ Started as [Starter.ghost][3]
 
 ### Install stable release
  - Just download latest [stable release][5], drop theme to `/content/themes/Supernova` and change Ghost settings.
- - Don't forget change Twitter username in `default.hbs` (footer) and disqus shortname in `assets/src/supernova.coffee`
+ - Don't forget change Twitter username (default: **justusebrain**) in `default.hbs` (footer) and disqus shortname (default: **theaqua**) in `assets/dist/supernova.js`
 
 ### Development install
  - **You must install Grunt, Bower and CoffeeScript: `npm install -g grunt bower coffee-script`**
