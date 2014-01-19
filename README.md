@@ -23,9 +23,9 @@ Started as [Starter.ghost][3]
 ### Development install
  - Clone this repository to `/content/themes`: `git clone https://github.com/theaqua/Supernova.ghost.git Supernova` (**important:** Ghost.js have bug with dots in theme's name, you must not use `Supernova.ghost` name, only `Supernova`)
  - In Ghost's settings change "Theme" preference, restart Ghost (yes, I'm serious)
- - Go to `/content/themes/Supernova.ghost`, make `npm install && bower install`
- - Run `grunt serve` (for live compiling `.scss` files and concat `.js` files) or `grunt` for build
- - Don't forget change Twitter username in `default.hbs` (footer) and disqus shortname in `supernova.js`
+ - Go to `/content/themes/Supernova`, make `npm install && bower install`
+ - Change Twitter username in `default.hbs` (footer) and disqus shortname in `supernova.coffee`
+ - Run `grunt serve` (for live compiling SCSS and CoffeeScript) or `grunt` for build
  
 ### Tips
  - For image cover use `![image-cover](url/to/picture.jpg)`
