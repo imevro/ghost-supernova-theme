@@ -3,27 +3,14 @@ module.exports = function(grunt) {
   // Project configuration
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-         '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-         '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-         '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author %> -' +
-         ' Licensed under the <%= pkg.license %> License\n*/\n\n',
+    paths: {
+      dist: 'assets/dist',
+      src: 'assets/src'
+    },
 
     // JSHint JavaScript files
     jshint: {
       files: ['Gruntfile.js', 'package.json']
-    },
-
-    // Concatenate all JavaScript files
-    concat: {
-      options: {
-        stripBanners: true,
-        separator: ';',
-      },
-      dist: {
-        src: ['assets/src/scripts/{,*/}*.js'],
-        dest: 'assets/dist/scripts/supernova.js'
-      },
     },
 
     // Minify JavaScript with Uglify
@@ -32,17 +19,34 @@ module.exports = function(grunt) {
         mangle: false
       },
       dist: {
-          files: {
-            'assets/dist/scripts/supernova.js': ['<%= concat.dist.dest %>']
-          }
+        files: {
+          '<%= paths.dist %>/scripts/supernova.js': ['<%= paths.dist %>/scripts/supernova.js']
         }
+      }
+    },
+
+    // CoffeeScript
+    coffee: {
+      options: {
+        sourceMap: true,
+        sourceRoot: ''
+      },
+      dist: {
+        files: [{
+          expand: true,
+          cwd: '<%= paths.src %>/scripts/',
+          src: ['*.coffee', '**/*.coffee', '**/**/*.coffee'],
+          dest: '<%= paths.dist %>/scripts',
+          ext: '.js'
+        }]
+      }
     },
 
     // Compile Sass to CSS -  destination : source
     sass: {
       server: {
         files: {
-          'assets/dist/styles/supernova.css': 'assets/src/styles/supernova.scss'
+          '<%= paths.dist %>/styles/supernova.css': '<%= paths.src %>/styles/supernova.scss'
         },
       },
       dist: {
@@ -51,7 +55,7 @@ module.exports = function(grunt) {
           sourceComments: 'normal'
         },
         files: {
-          'assets/dist/styles/supernova.css': 'assets/src/styles/supernova.scss'
+          '<%= paths.dist %>/styles/supernova.css': '<%= paths.src %>/styles/supernova.scss'
         },
       },
     },
@@ -61,40 +65,48 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'assets/dist/styles/',
+          cwd: '<%= paths.dist %>/styles/',
           src: '{,*/}*.css',
-          dest: 'assets/dist/styles/'
+          dest: '<%= paths.dist %>/styles/'
         }]
       }
     },
 
-    // Simple config to run sass, jshint and uglify any time a js or sass file is added, modified or deleted
+    concurrent: {
+      serve: [
+        'coffee:dist',
+        'sass:server',
+        'autoprefixer'
+      ],
+      dist: [
+        'jshint',
+        'coffee:dist',
+        'sass:dist',
+        'autoprefixer'
+      ]
+    },
+
+    // Simple config to run sass, jshint and coffee any time a js or sass file is added, modified or deleted
     watch: {
+      coffee: {
+        files: ['<%= paths.src %>/scripts/*.coffee', '<%= paths.src %>/scripts/**/*.coffee', '<%= paths.src %>/scripts/**/**/*.coffee'],
+        tasks: ['coffee:dist']
+      },
       sass: {
-        files: ['assets/src/styles/{,*/}*.scss'],
+        files: ['<%= paths.src %>/styles/{,*/}*.scss'],
         tasks: ['sass:server', 'autoprefixer']
       },
       jshint: {
         files: ['<%= jshint.files %>'],
         tasks: ['jshint']
       },
-      concat: {
-        files : ['<%= concat.dist.src %>'],
-        tasks: ['concat']
-      },
     },
   });
 
   // Load the plug-ins
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.loadNpmTasks('grunt-autoprefixer');
+  require('load-grunt-tasks')(grunt);
 
   // Default tasks
-  grunt.registerTask('default', ['jshint', 'concat', 'sass:dist', 'autoprefixer', 'uglify']);
-  grunt.registerTask('serve', ['sass:server', 'autoprefixer', 'concat', 'watch']);
+  grunt.registerTask('default', ['concurrent:dist', 'uglify']);
+  grunt.registerTask('serve', ['concurrent:serve', 'watch']);
 };

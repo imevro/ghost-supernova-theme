@@ -5,13 +5,15 @@ Started as [Starter.ghost][3]
 ![Supernova.ghost][1]
 
 ### Features
+ - Ghost 0.4 support
  - Pure design
  - Smooth animations
  - Covers in blog post: `![image-cover](url/to/picture.jpg)`
  - Link to `/ghost/` in top right position
+ - Disqus integration
  - And other:
   - Twitter Bootstrap 3, normalize.css, Font Awesome
-  - SCSS with [lib-sass][2] (written on C)
+  - SCSS with [lib-sass][2] (written on C), CoffeeScript
   - Grunt.js, Bower
 
 ### Install stable release
