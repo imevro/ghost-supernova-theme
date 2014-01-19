@@ -35,13 +35,11 @@
     }
   }
 
-  pre {
+  pre,
+  code {
     background-color: rgb(41, 46, 51);
     color: $white;
     border: 0;
-    text-shadow: none;
-
-    font-weight: normal;
 
     code {
       font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
