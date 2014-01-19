@@ -37,7 +37,47 @@ h4, h5, h6 {
   border-bottom: 1px solid $lightgray;
   
   .blog-cover-overlay {
-    display: none;
+    a {
+      text-shadow: none;
+      font-family: $sans-serif;
+      font-size: .7em;
+      display: block;
+    }
+
+    .blog-link-return {
+      display: none;
+
+      position: absolute;
+      top: 1em;
+      left: 3em;
+
+      color: $white;
+
+      &:hover {
+        color: darken($white, 10%);
+      }
+
+      @include responsive(sm) {
+        left: 1em;
+      }
+    }
+
+    .blog-link-login {
+      opacity: 0;
+      display: none;
+
+      position: absolute;
+      top: 1.5em;
+      right: 3em;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      @include responsive(sm) {
+        display: block;
+      }
+    }
   }
 
   &, h1 {
@@ -79,7 +119,6 @@ h4, h5, h6 {
     }
 
     .blog-cover-overlay {
-      display: block;
       position: absolute;
       top: 0;
       bottom: 0;
@@ -88,28 +127,17 @@ h4, h5, h6 {
 
       background-color: rgba(0, 0, 0, 0.3);
 
-      .blog-return-link {
-        text-shadow: none;
-        font-family: $sans-serif;
-        font-size: .7em;
-        color: $white;
-
-        position: absolute;
-        top: 1em;
-        left: 3em;
-
-        @include responsive(sm) {
-          left: 1em;
-        }
-
-        &:hover {
-          color: darken($white, 10%);
-        }
+      .blog-link-return {
+        display: block;
 
         img {
           max-width: 50px;
           border-radius: 50%;
         }
+      }
+
+      .blog-link-login {
+        color: $white;
       }
     }
 

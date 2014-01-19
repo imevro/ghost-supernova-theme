@@ -34,6 +34,19 @@
       font-size: 1.1em;
     }
   }
+
+  pre {
+    background-color: rgb(41, 46, 51);
+    color: $white;
+    border: 0;
+    text-shadow: none;
+
+    font-weight: normal;
+
+    code {
+      font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    }
+  }
 }
 
 .post-featured-marker {
