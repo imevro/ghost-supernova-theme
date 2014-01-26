@@ -7,60 +7,50 @@
   <div class="col-xs-12">
     {{#post}}
       <div class="row">
-        <div class="col-sm-2">
+        <div class="col-lg-2 post-meta">
           <h3>
             <time datetime="{{date format='YYYY-MM-DD'}}" id="post-date">{{date format="DD MMM YYYY"}}</time>
           </h3>
         </div>
-        <div class="col-sm-10 col-lg-8">
-          <section class="post-content">
-            <h3 class="post-title" id="post-title">{{{title}}}</h3>
-            {{content}}
-          </section>
+        <div class="col-lg-8 post-content">
+          <h3 class="post-title" id="post-title">{{{title}}}</h3>
+
+          {{content}}
         </div>
       </div> <!-- .row -->
 
-      <footer class="post-footer">
+      <div class="post-share row">
+        <a class="fa fa-twitter fa-social col-xs-6 col-sm-3" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
+            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+            <span class="hidden">Twitter</span>
+        </a>
+        <a class="fa fa-facebook fa-social col-xs-6 col-sm-3" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+            <span class="hidden">Facebook</span>
+        </a>
+        <a class="fa fa-google-plus fa-social col-xs-6 col-sm-3" href="https://plus.google.com/share?url={{url absolute="true"}}"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+            <span class="hidden">Google+</span>
+        </a>
+        <a class="fa fa-vk fa-social col-xs-6 col-sm-3" href="http://vk.com/share.php?url={{url absolute="true"}}"
+           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+            <span class="hidden">VK</span>
+        </a>
+      </div>
+
+{{!--       <footer class="post-footer post-author">
         <div class="row">
-          <div class="col-sm-2">
-            <section class="post-share">
-              <h4>Share this post</h4>
-              <a class="fa fa-twitter fa-social" href="http://twitter.com/share?text={{encode title}}&url={{url absolute="true"}}"
-                  onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                  <span class="hidden">Twitter</span>
-              </a>
-              <a class="fa fa-facebook fa-social" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                  onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                  <span class="hidden">Facebook</span>
-              </a>
-              <a class="fa fa-google-plus fa-social" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                 onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                  <span class="hidden">Google+</span>
-              </a>
-{{!--               <a class="fa fa-vk fa-social" href="http://vk.com/share.php?url={{url absolute="true"}}"
-                 onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                  <span class="hidden">VK</span>
-              </a> {{! Uncomment if you want VK share}}
- --}}            </section>
+          <div class="col-lg-2 text-center">
+            <img src="{{author.image}}" class="post-author-image" alt="">            
           </div>
-          <div class="col-sm-10 col-lg-8">
-            <section class="post-author">
-              <div class="row">
-                <div class="col-sm-3 col-md-2">
-                  <h4 class="visible-xs">{{author.name}}</h4>
-                  <img src="{{author.image}}" class="post-author-image" alt="">
-                </div>
-                <div class="col-sm-9 col-md-10">
-                  <h4 class="hidden-xs">{{author.name}}</h4>
-                  <p>{{author.bio}}</p>
-                </div>
-              </div>
-            </section>
+          <div class="col-lg-8">
+            <h3>{{author.name}}</h3>
+            <p>{{author.bio}}</p>
           </div>
         </div>
       </footer>
-
-      <div class="row">
+ --}}
+      <div class="post-disqus row">
         <div class="col-xs-12">
           <div id="disqus_thread"></div>
         </div>

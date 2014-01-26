@@ -31,7 +31,7 @@ Started as [Starter.ghost][3]
 ### Tips
  - For image cover use `![image-cover](url/to/picture.jpg)`
  - For image with no border use `![no-border](url/to/picture.jpg)`
- - Layout: `.col-sm-2+.col-sm-10.col-lg-8`
+ - Layout: `.col-lg-2+.col-lg-10`
 
 ### License
 CC-NC-SA. You can't sell, but you can use in commercial services (ads including).

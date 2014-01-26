@@ -1,3 +1,15 @@
+.post {
+  margin-bottom: 2em;
+}
+
+.post-meta {
+  color: rgb(153, 153, 153);
+}
+
+.post-tags {
+  font-size: .9em;
+}
+
 // Post
 .post-content {
   font-family: $serif;
@@ -7,6 +19,10 @@
 
   p {
     margin-bottom: 2em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   ul {
@@ -34,9 +50,13 @@
       margin: 0;
       padding: 0;
       border: 0;
-      padding: 2em 0em 2em 2em;
+      padding: 2em 0em;
       font-size: 1.7em;
       line-height: 1.5;
+
+      @include responsive(sm) {
+        padding-left: 2em;
+      }
     }
 
     p {
@@ -56,59 +76,46 @@
   }
 }
 
-.post-featured-marker {
-  color: $gold;
-  display: none;
-}
-
-.post {
-  &.featured {
-    .post-featured-marker {
-      display: block;
-    }
-  }
-}
-
-.post-tags {
-  font-size: .9em;
-  color: rgb(153, 153, 153);
-}
-
-.post-footer {
-  border-top: 1px solid rgb(238, 238, 238);
+.post-share {
+  text-align: center;
   margin-top: 2em;
-  padding: 1em 0;
 
   .fa-social {
-    font-size: 2em;
-    margin-right: 1em;
-    transition: color .3s;
+    padding-top: .8em;
+    padding-bottom: .8em;
 
-    &:hover {
-      border: 0;
-    }
+    font-size: 3em;
+    color: $lightgray;
+
+    border-top: 1px solid $lightgray;
+    border-bottom: 1px solid $lightgray;
+    transition: all .3s;
 
     &.fa-facebook {
-      color: $facebook-color;
-
       &:hover {
-        color: darken($facebook-color, 20%);
+        color: $facebook-color;
+        border-color: $facebook-color;
       }
     }
 
     &.fa-twitter {
-      color: $twitter-color;
-
       &:hover {
-        color: darken($twitter-color, 20%);
+        color: $twitter-color;
+        border-color: $twitter-color;
       }
     }
 
     &.fa-google-plus {
-      color: $gplus-color;
-
       &:hover {
-        color: darken($gplus-color, 20%);
+        color: $gplus-color;
+        border-color: $gplus-color;
+      }
+    }
+
+    &.fa-vk {
+      &:hover {
+        color: $vk-color;
+        border-color: $vk-color;
       }
     }
   }
@@ -119,6 +126,10 @@
     max-height: 100px;
     border-radius: 50%;
   }
+}
+
+.post-disqus {
+  margin-top: 2em;
 }
 
 // Pagination (wow, Ghost render template on backend!)
