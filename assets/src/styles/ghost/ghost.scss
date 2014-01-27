@@ -3,7 +3,7 @@
 }
 
 .post-meta {
-  color: rgb(153, 153, 153);
+  color: $gray;
 }
 
 .post-tags {
@@ -32,11 +32,9 @@
   img {
     max-width: 100%;
     border: 1px solid $lightgray;
-    box-shadow: .4em .4em 0 $lightgray;
 
     &[alt="no-border"] {
       border: 0;
-      box-shadow: none;
     }
 
     &[alt="image-cover"] {
@@ -70,7 +68,7 @@
 
   pre,
   code {
-    background-color: rgb(41, 46, 51);
+    background-color: $asphalt;
     color: $white;
     border: 0;
 

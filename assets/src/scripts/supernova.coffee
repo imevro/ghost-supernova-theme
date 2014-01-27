@@ -7,14 +7,14 @@ postCover = $("img[alt='image-cover']")
 blogCover = $("#blog-cover")
 
 if postCover.length > 0
-  # Add image and class .covered
-  blogCover.css("background-image", "url(#{postCover.attr('src')})").addClass "covered"
-
   # Replace old content
   $("#blog-image").hide()
   $("#blog-title").text $("#post-title").hide().text()
   $("#blog-subtitle").text $("#post-date").hide().text()
   postCover.remove()
+
+  # Add image and class .covered
+  blogCover.css("background-image", "url(#{postCover.attr('src')})").addClass "covered"
 
 disqus_shortname = "theaqua" # required: replace example with your forum shortname
 (->
