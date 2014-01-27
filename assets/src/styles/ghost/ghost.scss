@@ -38,6 +38,10 @@
       border: 0;
       box-shadow: none;
     }
+
+    &[alt="image-cover"] {
+      display: none;
+    }
   }
 
   blockquote {
@@ -87,9 +91,15 @@
     font-size: 3em;
     color: $lightgray;
 
+    z-index: 1;
+
     border-top: 1px solid $lightgray;
     border-bottom: 1px solid $lightgray;
     transition: all .3s;
+
+    &:hover {
+      z-index: 2;
+    }
 
     &.fa-facebook {
       &:hover {

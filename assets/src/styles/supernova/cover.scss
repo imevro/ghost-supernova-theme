@@ -7,21 +7,14 @@
   margin-bottom: 1em;
   
   .blog-cover-overlay {
-    a {
-      text-shadow: none;
-      font-family: $sans-serif;
-      font-size: .7em;
-      display: block;
-    }
-
-    .blog-link-return {
-      display: none;
-
+    .btn-stmenu {
       position: absolute;
       top: 1em;
       left: 3em;
 
-      color: $white;
+      background-color: rgba(0, 0, 0, 0);
+      border: 0;
+      color: rgb(85, 164, 242);
 
       &:hover {
         color: darken($white, 10%);
@@ -29,23 +22,6 @@
 
       @include responsive(sm) {
         left: 1em;
-      }
-    }
-
-    .blog-link-login {
-      opacity: 0;
-      display: none;
-
-      position: absolute;
-      top: 1.5em;
-      right: 3em;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      @include responsive(sm) {
-        display: block;
       }
     }
   }
@@ -96,15 +72,6 @@
       right: 0;
 
       background-color: rgba(0, 0, 0, 0.3);
-
-      .blog-link-return {
-        display: block;
-
-        img {
-          max-width: 50px;
-          border-radius: 50%;
-        }
-      }
 
       .blog-link-login {
         color: $white;
