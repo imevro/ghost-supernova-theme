@@ -16,6 +16,7 @@ if postCover.length > 0
   # Add image and class .covered
   blogCover.css("background-image", "url(#{postCover.attr('src')})").addClass "covered"
 
+## Load disqus
 disqus_shortname = "theaqua" # required: replace example with your forum shortname
 (->
   if document.getElementById("disqus_thread") isnt null
@@ -24,3 +25,6 @@ disqus_shortname = "theaqua" # required: replace example with your forum shortna
     dsq.src = "//#{disqus_shortname}.disqus.com/embed.js"
     (document.getElementsByTagName("head")[0] or document.getElementsByTagName("body")[0]).appendChild dsq
 )()
+
+## Load highlight
+hljs.initHighlightingOnLoad();

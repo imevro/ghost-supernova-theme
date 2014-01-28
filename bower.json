@@ -4,6 +4,7 @@
   "dependencies": {
     "bootstrap": "",
     "normalize-css": "",
-    "font-awesome": ""
+    "font-awesome": "",
+    "highlightjs": ""
   }
 }
