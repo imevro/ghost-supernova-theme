@@ -7,22 +7,29 @@
   margin-bottom: 1em;
 
   .blog-cover-overlay {
-    .btn-stmenu {
+    .blog-cover-links {
       position: absolute;
       top: 1em;
-      left: 3em;
+      left: 1em;
 
-      background-color: rgba(0, 0, 0, 0);
-      border: 0;
-      text-shadow: none;
-      color: rgb(85, 164, 242);
+      .btn-stmenu,
+      .btn-back {
+        background-color: rgba(0, 0, 0, 0);
+        border: 0;
+        text-shadow: none;
+        color: rgb(85, 164, 242);
 
-      &:hover {
-        color: darken($white, 10%);
+        display: block;
+        text-align: left;
+
+        &:hover {
+          color: darken($white, 10%);
+        }
       }
 
-      @include responsive(sm) {
-        left: 1em;
+      .btn-back {
+        font-family: $sans-serif;
+        display: none;
       }
     }
   }
@@ -74,8 +81,12 @@
 
       background-color: rgba(0, 0, 0, 0.3);
 
-      .blog-link-login {
-        color: $white;
+      .btn-back {
+        display: block;
+      }
+
+      .btn-stmenu {
+        display: none;
       }
     }
 

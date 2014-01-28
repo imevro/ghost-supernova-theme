@@ -47,14 +47,19 @@
               {{! The big featured header on the homepage, with the site logo and description }}
               <header class="jumbotron blog-cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} id="blog-cover">
                 <div class="blog-cover-overlay">
-                  <a href="" id="st-showMenu" class="btn btn-default btn-stmenu fadeInUp" data-effect="st-effect-push">
-                    <i class="fa fa-bars"></i>
-                  </a>
+                  <div class="blog-cover-links">
+                    <a href="" id="st-showMenu" class="btn btn-default btn-stmenu fadeInUp" data-effect="st-effect-push">
+                      <i class="fa fa-bars"></i>
+                    </a>
+                    <a href="/" class="btn btn-default btn-back fadeInUp">
+                      <i class="fa fa-angle-left"></i> Back
+                    </a>
+                  </div>
                 </div>
 
                 <div class="container">
                   <div class="row">
-                    <div class="col-sm-10 col-md-8 col-sm-offset-2 text-center blog-cover-content fadeInUp" id="blog-cover-content">
+                    <div class="col-sm-12 col-lg-8 col-lg-offset-2 text-center blog-cover-content fadeInUp" id="blog-cover-content">
                       {{#if @blog.logo}}
                         <a class="blog-image" href="{{@blog.url}}" id="blog-image">
                           <img src="{{@blog.logo}}" alt="{{@blog.title}}">

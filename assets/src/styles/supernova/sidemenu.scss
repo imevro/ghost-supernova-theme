@@ -36,7 +36,7 @@ body,
     background: rgba(0, 0, 0, 0.2);
     content: '';
     opacity: 0;
-    transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+    transition: opacity 0.5s, width, height 0.1s 0.5s;
   }
 }
 
@@ -74,10 +74,10 @@ body,
   width: 0;
   height: 0;
   opacity: 0;
-  transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;
+  transition: opacity 0.5s, width, height 0.1s 0.5s;
 }
 
-/* content style */
+/* Styles */
 .st-menu {
   background-color: $asphalt;
   color: $blue;
@@ -86,7 +86,7 @@ body,
     margin: 0;
     padding: 0;
     list-style: none;
-    margin-top: .5em;
+    margin-top: .9em;
 
     > li {
       > a {
