@@ -81,40 +81,29 @@ body,
 .st-menu {
   background-color: $asphalt;
   color: $blue;
+  padding-top: .9em;
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    margin-top: .9em;
+  > a {
+    display: block;
+    padding: 1em 1em 1em 2em;
+    outline: none;
 
-    > li {
-      > a {
-        display: block;
-        padding: 1em 1em 1em 2em;
-        outline: none;
+    color: $blue;
+    font-weight: 100;
+    transition: background, color, opacity 0.3s;
 
-        color: $blue;
-        font-weight: 100;
-        transition: background, color, opacity 0.3s;
+    &:hover {
+      border: 0;
+      background: $black;
+      color: $white;
+    }
 
-        &:hover {
-          border: 0;
-          background: $black;
-          color: $white;
-        }
-      }
+    &.my-ghost {
+      margin-top: 5em;
+      opacity: 0;
 
-      &.my-ghost {
-        margin-top: 5em;
-
-        > a {
-          opacity: 0;
-
-          &:hover {
-            opacity: 1;
-          }          
-        }
+      &:hover {
+        opacity: 1;
       }
     }
   }
