@@ -28,3 +28,8 @@ if postCover.length > 0
 
 ## Load highlight
 hljs.initHighlightingOnLoad();
+
+## Load Echo.js
+Echo.init
+  offset: "0"
+  throttle: "250"
