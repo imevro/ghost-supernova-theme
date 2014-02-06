@@ -109,5 +109,14 @@
     <script src="{{asset "components/lazyload/build/lazyload.min.js"}}"></script>
     <script src="{{asset "dist/scripts/sidemenu.js"}}"></script>
     <script src="{{asset "dist/scripts/supernova.js"}}"></script>
+    <script>
+      if (document.getElementById("disqus_thread") !== null) {
+        (function() {
+          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      }
+    </script>
   </body>
 </html>
