@@ -1,42 +1,37 @@
 {{!< default}}
+{{! The comment above "< default" means - insert everything in this file into the {body} of the default.hbs template, which contains our header/footer. }}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
+<div class="col-xs-12 fadeInUp">
+  {{#foreach posts}} {{! Each post will be output using this markup }}
+    <article class="{{post_class}} row">
+      <div class="col-lg-2 post-meta">
+        <h3 class="post-date">
+          <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+        </h3>
+        <p class="post-tags">
+          {{#if tags}}<i class="fa fa-tags"></i> {{tags}}{{/if}}
+        </p>
+      </div>
+      <div class="col-lg-8">
+        <div class="post-content">
+          <h3 class="post-title">
+            <a href="{{url}}">{{{title}}}</a>
+          </h3>          
 
-{{! The main content area on the homepage }}
-<section role="main">
-  <div class="col-xs-12 fadeInUp">
-    {{#foreach posts}} {{! Each post will be output using this markup }}
-      <article class="{{post_class}} row">
-        <div class="col-lg-2 post-meta">
-          <h3 class="post-date">
-            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
-          </h3>
-          <p class="post-tags">
-            {{#if tags}}<i class="fa fa-tags"></i> {{tags}}{{/if}}
+          <p>
+            {{excerpt}}
+            <a href="{{url}}">
+              Read more <i class="fa fa-angle-right"></i>
+            </a>
           </p>
         </div>
-        <div class="col-lg-8">
-          <div class="post-content">
-            <h3 class="post-title">
-              <a href="{{url}}">{{{title}}}</a>
-            </h3>          
-
-            <p>
-              {{excerpt}}
-              <a href="{{url}}">
-                Read more <i class="fa fa-angle-right"></i>
-              </a>
-            </p>
-          </div>
-        </div>
-      </article>
-    {{/foreach}}
-
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2">
-        {{pagination}} {{!! After all the posts, we have the previous/next pagination links }}
       </div>
+    </article>
+  {{/foreach}}
+
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      {{pagination}} {{!! After all the posts, we have the previous/next pagination links }}
     </div>
   </div>
-</section>
+</div>

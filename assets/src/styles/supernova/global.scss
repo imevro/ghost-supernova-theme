@@ -19,21 +19,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 // Sticky footer
-html,
-body {
-  height: 100%;
+.st-content-inner {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-.wrapper {
-  min-height: 100%;
-  height: auto;
-  margin: 0 auto (-($footer-height + $footer-margin)); // Negative indent footer by its height
-  padding-bottom: $footer-height + $footer-margin; // Pad bottom by footer height
-  // padding-bottom: 2em;
+.main-content {
+  flex: 1;
 }
 
 .main-footer {
-  height: $footer-height;
   padding: 1em 0;
   margin-top: $footer-margin;
   border-top: 1px solid $lightgray;
