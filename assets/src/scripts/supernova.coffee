@@ -2,9 +2,6 @@
 Main JS file for Supernova behaviours
 ###
 
-## Load disqus
-disqus_shortname = "theaqua" # required: replace example with your forum shortname
-
 # Post cover. God, forgive me for jQuery, but Ghost don't have blog post cover feature
 postCover = $("img[alt='image-cover']")
 blogCover = $("#blog-cover")
