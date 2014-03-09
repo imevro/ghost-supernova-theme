@@ -6,45 +6,14 @@
   border-bottom: 1px solid $lightgray;
   margin-bottom: 1em;
 
-  .blog-cover-overlay {
-    .blog-cover-links {
-      position: absolute;
-      top: 1em;
-      left: 1em;
-
-      .btn-stmenu,
-      .btn-back {
-        background-color: rgba(0, 0, 0, 0);
-        border: 0;
-        text-shadow: none;
-        color: rgb(85, 164, 242);
-
-        display: block;
-        text-align: left;
-
-        &:hover {
-          color: darken($white, 10%);
-        }
-      }
-
-      .btn-back {
-        font-family: $sans-serif;
-        display: none;
-      }
-    }
-  }
-
   &, h1 {
     font-family: $sans-serif;
     font-weight: 400;
   }
 
   a {
-    color: $black;
-
     &:hover {
       text-decoration: none;
-      color: $asphalt;
       border: 0;
     }
   }
@@ -62,6 +31,7 @@
     color: $white;
     position: relative;
     padding-top: 3em;
+    margin-top: 0;
 
     @include responsive(sm) {
       padding: 10em 0 5em 0;
@@ -80,14 +50,6 @@
       right: 0;
 
       background-color: rgba(0, 0, 0, 0.3);
-
-      .btn-back {
-        display: block;
-      }
-
-      .btn-stmenu {
-        display: none;
-      }
     }
 
     .blog-cover-content {

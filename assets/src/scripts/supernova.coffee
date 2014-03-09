@@ -6,6 +6,9 @@ Main JS file for Supernova behaviours
 postCover = $("img[alt='image-cover']")
 blogCover = $("#blog-cover")
 
+$(".newer-posts").html("<i class='fa fa-angle-left'></i> Newer posts")
+$(".older-posts").html("Older posts <i class='fa fa-angle-right'></i>")
+
 if postCover.length > 0
   # Replace old content
   $("#blog-image").hide()

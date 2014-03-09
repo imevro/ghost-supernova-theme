@@ -1,0 +1,33 @@
+.navbar-supernova {
+  margin-bottom: 0;
+  border-bottom: 1px solid $lightgray;
+  background: rgba(255, 255, 255, .9);
+
+  .navbar-brand {
+    border: 0;
+    padding: 20px 15px;
+  }
+
+  .nav {
+    > li {
+      > a {
+        border: 0;
+        padding: 20px 15px;
+
+        &:hover,
+        &:focus {
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  .navbar-ghost {
+    opacity: 0;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

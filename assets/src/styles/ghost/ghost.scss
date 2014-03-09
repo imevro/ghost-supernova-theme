@@ -1,5 +1,21 @@
 .post {
   margin-bottom: 2em;
+
+  .fa-star {
+    display: none;
+    color: $gold;
+  }
+
+  &.featured {
+    .post-title {
+      a {
+        color: $gold;
+      }
+      .fa-star {
+        display: inline;
+      }
+    }
+  }
 }
 
 .post-meta {
@@ -7,7 +23,7 @@
 }
 
 .post-tags {
-  font-size: .9em;
+  font-family: $serif;
 }
 
 // Post
@@ -19,6 +35,10 @@
 
   p {
     margin-bottom: 2em;
+
+    &.post-excerpt {
+      margin-bottom: 0;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -102,21 +122,19 @@
 }
 
 .post-share {
-  text-align: center;
   margin-top: 2em;
 
   .fa-social {
-    padding-top: .8em;
+    padding-top: .3em;
     padding-bottom: .8em;
 
-    font-size: 3em;
+    font-size: 48px; // for the h3
     color: $lightgray;
 
     z-index: 1;
 
-    border-top: 1px solid $lightgray;
-    border-bottom: 1px solid $lightgray;
-    transition: all .3s;
+    border-bottom: 0;
+    transition: color .3s;
 
     &:hover {
       z-index: 2;
@@ -125,36 +143,34 @@
     &.fa-facebook {
       &:hover {
         color: $facebook-color;
-        border-color: $facebook-color;
       }
     }
 
     &.fa-twitter {
       &:hover {
         color: $twitter-color;
-        border-color: $twitter-color;
       }
     }
 
     &.fa-google-plus {
       &:hover {
         color: $gplus-color;
-        border-color: $gplus-color;
       }
     }
 
     &.fa-vk {
       &:hover {
         color: $vk-color;
-        border-color: $vk-color;
       }
     }
   }
 }
 
 .post-author {
+  margin-top: 2em;
+
   .post-author-image {
-    max-height: 100px;
+    max-height: 130px;
     border-radius: 50%;
   }
 }
@@ -172,10 +188,6 @@
   font-size: .9em;
   color: $gray;
   text-align: center;
-
-  a {
-    color: $gray;
-  }
 
   .older-posts,
   .newer-posts {

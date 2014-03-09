@@ -24,100 +24,99 @@
     {{ghost_head}}
   </head>
   <body class="{{body_class}}">
-    <div id="st-container" class="st-container">
-      <div class="st-pusher">
-        <nav class="st-menu st-effect-push">
-          <a href="/">Home</a>
-          <a href="/about">About</a>
-          <a href="{{@blog.url}}/ghost/" class="my-ghost">
-            <i class="fa fa-lock"></i> Ghost
+    <nav class="navbar navbar-supernova fadeInUp" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-supernova-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="fa fa-bars"></i>
           </a>
-        </nav>
+          <a class="navbar-brand" href="/">
+            {{@blog.title}}
+          </a>
+        </div>
+      
+        <div class="collapse navbar-collapse navbar-supernova-collapse">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="/about">About</a>
+            </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="navbar-ghost">
+              <a href="{{@blog.url}}/ghost/">
+                <i class="fa fa-lock"></i> Ghost
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div> <!-- .container -->
+    </nav>
 
-        <div class="st-content">
-          <div class="st-content-inner">
-            <header class="jumbotron blog-cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} id="blog-cover">
-              <div class="blog-cover-overlay">
-                <div class="blog-cover-links">
-                  <a href="" id="st-showMenu" class="btn btn-default btn-stmenu fadeInUp" data-effect="st-effect-push">
-                    <i class="fa fa-bars"></i>
-                  </a>
-                  <a href="/" class="btn btn-default btn-back fadeInUp">
-                    <i class="fa fa-angle-left"></i> Back
-                  </a>
-                </div>
-              </div>
+    <header class="jumbotron blog-cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} id="blog-cover">
+      <div class="blog-cover-overlay"></div>
 
-              <div class="container">
-                <div class="row">
-                  <div class="col-sm-12 col-lg-8 col-lg-offset-2 text-center blog-cover-content fadeInUp" id="blog-cover-content">
-                    {{#if @blog.logo}}
-                      <a class="blog-image" href="{{@blog.url}}" id="blog-image">
-                        <img src="{{@blog.logo}}" alt="{{@blog.title}}">
-                      </a>
-                    {{/if}}
-                    <h1 class="blog-title" id="blog-title">
-                      <a href="{{@blog.url}}">
-                        {{@blog.title}}
-                      </a>
-                    </h1>
-                    <p class="blog-subtitle" id="blog-subtitle">{{@blog.description}}</p>
-                  </div>
-                </div>
-              </div>
-            </header>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-lg-8 col-lg-offset-2 text-center blog-cover-content fadeInUp" id="blog-cover-content">
+            {{#if @blog.logo}}
+              <a class="blog-image" href="{{@blog.url}}" id="blog-image">
+                <img src="{{@blog.logo}}" alt="{{@blog.title}}">
+              </a>
+            {{/if}}
+            <h1 class="blog-title" id="blog-title">
+              <a href="{{@blog.url}}">
+                {{@blog.title}}
+              </a>
+            </h1>
+            <p class="blog-subtitle" id="blog-subtitle">{{@blog.description}}</p>
+          </div>
+        </div>
+      </div>
+    </header>
 
-            <section class="main-content container">
-              {{{body}}}
-            </section> <!-- .main-content -->
+    <section class="container">
+      {{{body}}}
+    </section>
 
-            <footer class="main-footer">
-              <div class="container">
-                <div class="col-sm-2">
-                  <p>
-                    <a href="{{@blog.url}}/rss/">
-                      <i class="fa fa-rss"></i> Subscribe
-                    </a>
-                  </p>
-                  <p>
-                    <a href="//twitter.com/justusebrain">
-                      <i class="fa fa-twitter"></i> justusebrain
-                    </a>
-                  </p>
-                </div>
-                <div class="col-sm-10 col-lg-8">
-                  <p>
-                    {{!-- All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved. --}}
-                    <a href="{{@blog.url}}/">{{@blog.title}}</a>
-                  </p>
-                  <p>
-                    Proudly published with <a href="http://ghost.org">Ghost</a>, design: <a href="https://github.com/theaqua/Supernova.ghost" title="version 0.3">Supernova</a>.
-                  </p>
-                </div>
-              </div>
-            </footer>
-          </div> <!-- .st-content-inner -->
-        </div> <!-- .st-content -->
-      </div> <!-- .st-pusher -->
-    </div> <!-- .st-container -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="col-sm-2">
+          <p>
+            <a href="{{@blog.url}}/rss/">
+              <i class="fa fa-rss"></i> Subscribe
+            </a>
+          </p>
+          <p>
+            <a href="//twitter.com/justusebrain">
+              <i class="fa fa-twitter"></i> justusebrain
+            </a>
+          </p>
+        </div>
+        <div class="col-sm-10 col-lg-8">
+          <p>
+            <a href="{{@blog.url}}/">{{@blog.title}}</a>
+          </p>
+          <p>
+            Proudly published with <a href="http://ghost.org">Ghost</a>, design: <a href="https://gumroad.com/l/Supernova" title="version 0.3">Supernova</a>.
+          </p>
+        </div>
+      </div>
+    </footer>
 
     {{! Ghost outputs important scripts and data with this tag }}
     {{ghost_foot}}
 
-    {{! The main JavaScript file for Supernova }}
     <script src="{{asset "components/highlightjs/highlight.pack.js"}}"></script>
-    <script src="{{asset "dist/scripts/sidemenu.js"}}"></script>
     <script src="{{asset "dist/scripts/supernova.js"}}"></script>
     <script>
       var disqus_shortname = "theaqua"; // required: replace example with your forum shortname
 
-      if (document.getElementById("disqus_thread") !== null) {
-        (function() {
-          var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-          dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-          (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      }
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
     </script>
   </body>
 </html>
