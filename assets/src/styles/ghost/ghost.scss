@@ -36,7 +36,8 @@
   p {
     margin-bottom: 2em;
 
-    &.post-excerpt {
+    &.post-excerpt,
+    &:empty {
       margin-bottom: 0;
     }
 
@@ -170,8 +171,12 @@
   margin-top: 2em;
 
   .post-author-image {
-    max-height: 130px;
+    max-height: 90px;
     border-radius: 50%;
+
+    @include responsive(sm) {
+      max-height: 130px;
+    }
   }
 }
 

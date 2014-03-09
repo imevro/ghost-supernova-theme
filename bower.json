@@ -5,6 +5,7 @@
     "bootstrap": "",
     "normalize-css": "",
     "font-awesome": "",
-    "highlightjs": ""
+    "highlightjs": "",
+    "instantclick": ""
   }
 }

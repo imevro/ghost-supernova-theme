@@ -21,3 +21,4 @@ if postCover.length > 0
 
 ## Load highlight
 hljs.initHighlightingOnLoad();
+InstantClick.init();
