@@ -129,13 +129,17 @@
     padding-top: .3em;
     padding-bottom: .8em;
 
-    font-size: 48px; // for the h3
+    font-size: 30px; // for the h3
     color: $lightgray;
 
     z-index: 1;
 
     border-bottom: 0;
     transition: color .3s;
+
+    @include responsive(sm) {
+      font-size: 48px;
+    }
 
     &:hover {
       z-index: 2;
@@ -171,11 +175,13 @@
   margin-top: 2em;
 
   .post-author-image {
-    max-height: 90px;
+    max-height: 65px;
+    margin-top: 15px;
     border-radius: 50%;
 
     @include responsive(sm) {
       max-height: 130px;
+      margin-top: 0;
     }
   }
 }
