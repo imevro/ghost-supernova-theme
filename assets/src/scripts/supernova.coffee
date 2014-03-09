@@ -13,7 +13,7 @@ if postCover.length > 0
   # Replace old content
   $("#blog-image").hide()
   $("#blog-title").text $("#post-title").hide().text()
-  $("#blog-subtitle").text $("#post-date").hide().text()
+  $("#blog-subtitle").hide()
   postCover.remove()
 
   # Add image and class .covered
