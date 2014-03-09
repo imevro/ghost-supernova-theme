@@ -20,9 +20,6 @@
 
 .post-meta {
   color: $gray;
-}
-
-.post-tags {
   font-family: $serif;
 }
 
@@ -122,6 +119,23 @@
   }
 }
 
+// Post author
+.post-author {
+  margin-top: 2em;
+
+  .post-author-image {
+    max-height: 65px;
+    margin-top: 15px;
+    border-radius: 50%;
+
+    @include responsive(sm) {
+      max-height: 130px;
+      margin-top: 0;
+    }
+  }
+}
+
+// Post share
 .post-share {
   margin-top: 2em;
 
@@ -171,52 +185,7 @@
   }
 }
 
-.post-author {
-  margin-top: 2em;
-
-  .post-author-image {
-    max-height: 65px;
-    margin-top: 15px;
-    border-radius: 50%;
-
-    @include responsive(sm) {
-      max-height: 130px;
-      margin-top: 0;
-    }
-  }
-}
-
+// Comments by disqus
 .post-disqus {
   margin-top: 2em;
-}
-
-// Pagination (wow, Ghost render template on backend!)
-.pagination {
-  position: relative;
-  width: 100%;
-  margin: 1em auto;
-  font-family: $sans-serif;
-  font-size: .9em;
-  color: $gray;
-  text-align: center;
-
-  .older-posts,
-  .newer-posts {
-    position: absolute;
-    display: inline-block;
-    text-decoration: none;
-  }
-
-  .older-posts {
-    right: 0;
-  }
-
-  .page-number {
-    display: inline-block;
-    padding: 2px 0;
-  }
-
-  .newer-posts {
-    left: 0;
-  }
 }
