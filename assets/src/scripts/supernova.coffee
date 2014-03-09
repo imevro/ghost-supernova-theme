@@ -18,7 +18,3 @@ if postCover.length > 0
 
   # Add image and class .covered
   blogCover.css("background-image", "url(#{postCover.attr('src')})").addClass "covered"
-
-## Load highlight
-hljs.initHighlightingOnLoad();
-InstantClick.init();

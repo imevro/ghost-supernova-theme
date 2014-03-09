@@ -4,27 +4,15 @@
   width: 100%;
   margin: 1em auto;
   font-family: $sans-serif;
-  font-size: .9em;
   color: $gray;
   text-align: center;
 
   .older-posts,
   .newer-posts {
-    position: absolute;
-    display: inline-block;
-    text-decoration: none;
-  }
-
-  .older-posts {
-    right: 0;
+    margin: 0 4em;
   }
 
   .page-number {
-    display: inline-block;
     padding: 2px 0;
-  }
-
-  .newer-posts {
-    left: 0;
   }
 }
