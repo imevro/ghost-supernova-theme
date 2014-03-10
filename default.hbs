@@ -23,29 +23,37 @@
   <body class="{{body_class}}">
     <nav class="navbar navbar-supernova fadeInUp" role="navigation">
       <div class="container">
-        <div class="navbar-header">
-          <a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-supernova-collapse">
-            <span class="sr-only">Toggle navigation</span>
-            <i class="fa fa-bars"></i>
-          </a>
-          <a class="navbar-brand" href="/">
-            {{@blog.title}}
-          </a>
-        </div>
-      
-        <div class="collapse navbar-collapse navbar-supernova-collapse">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="/about">About</a>
-            </li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li class="navbar-ghost">
-              <a href="{{@blog.url}}/ghost/" data-no-instant>
-                <i class="fa fa-lock"></i> Ghost
+        <div class="row">
+          <div class="col-lg-10">
+            <div class="navbar-header">
+              <a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-supernova-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
               </a>
-            </li>
-          </ul>
+              <a class="navbar-brand visible-xs" href="/">
+                {{@blog.title}}
+              </a>
+            </div>
+          
+            <div class="collapse navbar-collapse navbar-supernova-collapse">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/about">About</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="navbar-ghost">
+                  <a href="{{@blog.url}}/ghost/" data-no-instant>
+                    <i class="fa fa-lock"></i> Ghost
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
         </div>
       </div> <!-- .container -->
     </nav>
