@@ -58,7 +58,7 @@
       </div> <!-- .container -->
     </nav>
 
-    <header class="jumbotron blog-cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} id="blog-cover">
+    <header class="jumbotron blog-cover {{#if @blog.cover}}blog-has-cover{{/if}}" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} id="blog-cover">
       <div class="blog-cover-overlay"></div>
 
       <div class="container">
@@ -119,7 +119,6 @@
     <script src="{{asset "components/bootstrap/js/collapse.js"}}"></script>
     <script src="{{asset "dist/scripts/supernova.js"}}"></script>
     <script data-no-instant>
-      hljs.initHighlightingOnLoad();
       InstantClick.init();
     </script>
     {{#if post}}
