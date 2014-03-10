@@ -10,11 +10,11 @@ Started as [Starter.ghost](https://github.com/theaqua/Starter.ghost)
 #### Features
 - Pure design with smooth animations
 - Mobile first and full responsive
-{<5>}![no-border](http://theaqua.im/content/images/2014/Mar/Eugene_Rodionov_2014_03_10_17_03_19_2014_03_10_17_04_09.jpg)
+![no-border](http://theaqua.im/content/images/2014/Mar/Eugene_Rodionov_2014_03_10_17_03_19_2014_03_10_17_04_09.jpg)
 - Post cover image
-{<7>}![no-border](http://theaqua.im/content/images/2014/Mar/Supernova_2014_03_10_16_58_34_2014_03_10_16_59_29.jpg)
+![no-border](http://theaqua.im/content/images/2014/Mar/Supernova_2014_03_10_16_58_34_2014_03_10_16_59_29.jpg)
 - Navbar with hidden link to control panel
-{<5>}![no-border](http://theaqua.im/content/images/2014/Mar/Supernova_2014_03_10_16_57_12_2014_03_10_16_57_39.jpg)
+![no-border](http://theaqua.im/content/images/2014/Mar/Supernova_2014_03_10_16_57_12_2014_03_10_16_57_39.jpg)
 - InstantClick for better UX: when user hover over link, [InstantClick](http://instantclick.io) preload content for faster loading.
 - Disqus integration
 - highlight.js for syntax highlighting 
