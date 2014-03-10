@@ -43,6 +43,18 @@
   font-size: 18px;
   line-height: 28px;
 
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+
+  h4, .h4 {
+    font-size: 20px;
+  }
+
+  .post-title {
+    font-weight: 400;
+  }
+
   p {
     margin-bottom: 1em;
 
