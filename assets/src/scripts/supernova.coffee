@@ -12,7 +12,7 @@ $(".older-posts").html("Older posts <i class='fa fa-angle-right'></i>")
 if postCover.length > 0
   # Replace old content
   $("#blog-image").hide()
-  $("#blog-title").text $("#post-title").hide().text()
+  $("#blog-title").text $("#post-title").addClass("post-title-hidden").text()
   $("#blog-subtitle").hide()
   postCover.remove()
 

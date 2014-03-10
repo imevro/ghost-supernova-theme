@@ -21,6 +21,15 @@
 .post-meta {
   color: $gray;
   font-family: $serif;
+  text-align: right;
+}
+
+.post-title {
+  &.post-title-hidden {
+    visibility: hidden;
+    margin: 0;
+    height: 20px;
+  }
 }
 
 // Post
@@ -31,7 +40,7 @@
   line-height: 28px;
 
   p {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
 
     &.post-excerpt,
     &:empty {
@@ -44,7 +53,11 @@
   }
 
   ul {
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+
+    ul {
+      margin-bottom: 0; // nested items
+    }
   }
   
   img {
@@ -80,7 +93,7 @@
       }
     }
 
-    margin-bottom: 2em;
+    margin-bottom: 1em;
   }
 
   blockquote {
@@ -91,14 +104,19 @@
 
     &.quote-lg {
       margin: 0;
-      padding: 0;
       border: 0;
-      padding: 2em 0em;
-      font-size: 1.7em;
-      line-height: 1.5;
+      padding: 1em 0;
+      font-size: 36px; // like h1 in bootstrap
+      text-align: center;
+      line-height: 1.4;
+      position: relative;
 
-      @include responsive(sm) {
-        padding-left: 2em;
+      &:before {
+        content: "“";
+      }
+
+      &:after {
+        content: "„";
       }
     }
 
@@ -129,7 +147,7 @@
     border-radius: 50%;
 
     @include responsive(sm) {
-      max-height: 130px;
+      max-height: 100px;
       margin-top: 0;
     }
   }

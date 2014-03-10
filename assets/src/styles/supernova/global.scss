@@ -21,7 +21,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-footer {
   padding: 1em 0;
-  margin-top: $footer-margin;
   border-top: 1px solid $lightgray;
   color: $gray;
 
@@ -31,6 +30,13 @@ h1, h2, h3, h4, h5, h6 {
     &:hover {
       color: $blue;
     }
+  }
+}
+
+.home-template,
+.archive-template {
+  .main-footer {
+    margin-top: $footer-margin;
   }
 }
 
