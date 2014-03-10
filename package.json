@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/theaqua/Supernova.ghost.git"
+    "url": "https://github.com/theaqua/Supernova.git"
   },
   "devDependencies": {
     "grunt": "~0.4.2",
