@@ -15,15 +15,18 @@
   }
 
   .older-posts {
-    right: 15em;
-  }
+    right: 0;
 
-  .page-number {
-    display: inline-block;
-    padding: 2px 0;
+    @include responsive(md) {
+      right: 15em;
+    }
   }
 
   .newer-posts {
-    left: 15em;
+    left: 0;
+
+    @include responsive(md) {
+      left: 15em;
+    }
   }
 }
