@@ -1,40 +1,42 @@
 {{!< default}}
+{{! The comment above "< default" means - insert everything in this file into the {body} of the default.hbs template, which contains our header/footer. }}
 
-{{! The comment above "< default" means - insert everything in this file into
-    the {body} of the default.hbs template, which contains our header/footer. }}
+<div class="col-xs-12 fadeInUp">
+  {{#foreach posts}}
+    <article class="{{post_class}} row">
+      <aside class="col-lg-2 post-meta">
+        <h3 class="post-date">
+          <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
+        </h3>
+        <p class="post-tags">
+          {{tags}}
+        </p>
+      </aside>
+      <div class="col-lg-8">
+        <div class="post-content">
+          <h3 class="post-title row">
+            <div class="col-xs-11">
+              <a href="{{url}}">{{{title}}}</a>  
+            </div>
+            <div class="col-xs-1 text-right">
+              <i class="fa fa-star"></i>
+            </div>
+          </h3>          
 
-{{! The main content area on the homepage }}
-<section role="main">
-  <div class="col-xs-12 fadeInUp">
-    {{#foreach posts}} {{! Each post will be output using this markup }}
-      <article class="{{post_class}} row">
-        <div class="col-sm-2">
-          <h3>
-            <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time>
-          </h3>
-          <p class="post-featured-marker">
-            <i class="fa fa-star"></i> Featured
-          </p>
-          <p class="post-tags">
-            {{tags prefix="Tags: "}}
+          <p class="post-excerpt">
+            {{excerpt}}…
+            <a href="{{url}}">
+              continue reading <i class="fa fa-angle-right"></i>
+            </a>
           </p>
         </div>
-        <div class="col-sm-10 col-lg-8">
-          <div class="post-content">
-            <h3 class="post-title">
-              <a href="{{url}}">{{{title}}}</a>
-            </h3>          
-
-            <p>{{excerpt}} <a href="{{url}}">Read more <i class="fa fa-angle-right"></i></a></p>
-          </div>
-        </div>
-      </article>
-    {{/foreach}}
-
-    <div class="row">
-      <div class="col-sm-10 col-sm-offset-2 col-lg-8">
-        {{pagination}} {{!! After all the posts, we have the previous/next pagination links }}
       </div>
+    </article>
+  {{/foreach}}
+
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+      {{pagination}}
     </div>
   </div>
-</section>
+</div>

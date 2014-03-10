@@ -1,0 +1,229 @@
+.post {
+  margin-bottom: 2em;
+
+  .fa-star {
+    display: none;
+    color: $gold;
+  }
+
+  &.featured {
+    .post-title {
+      a {
+        color: $gold;
+      }
+      .fa-star {
+        display: inline;
+      }
+    }
+  }
+}
+
+.post-meta {
+  color: $gray;
+  font-family: $serif;
+  text-align: left;
+
+  @include responsive(lg) {
+    text-align: right;
+  }
+}
+
+.post-title {
+  &.post-title-hidden {
+    visibility: hidden;
+    margin: 0;
+    height: 20px;
+  }
+}
+
+// Post
+.post-content {
+  font-family: $serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+  }
+
+  h4, .h4 {
+    font-size: 20px;
+  }
+
+  .post-title {
+    font-weight: 400;
+  }
+
+  p {
+    margin-bottom: 1em;
+
+    &.post-excerpt,
+    &:empty {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul,
+  ol {
+    margin-bottom: 1em;
+
+    ul,
+    ol {
+      margin-bottom: 0; // nested items
+    }
+  }
+  
+  img {
+    max-width: 100%;
+    border: 1px solid $lightgray;
+    margin: 1em 0;
+
+    &[alt="no-border"] {
+      border: 0;
+    }
+
+    &[alt="image-cover"] {
+      display: none;
+    }
+  }
+
+  .image-block {
+    display: block;
+    text-align: center;
+
+    &:hover {
+      border: 0;
+    }
+  }
+
+  .gallery {
+    .col-sm-3,
+    .col-sm-6,
+    .col-sm-9 {
+      padding: 0;
+
+      &:hover {
+        border: 0;
+      }
+    }
+
+    margin-bottom: 1em;
+  }
+
+  blockquote {
+    margin-left: -25px;
+    border-color: $blue;
+    border-width: .2em;
+    font-style: italic;
+
+    &.quote-lg {
+      margin: 0;
+      border: 0;
+      padding: 1em 0;
+      font-size: 36px; // like h1 in bootstrap
+      text-align: center;
+      line-height: 1.4;
+      position: relative;
+
+      &:before {
+        content: "“ ";
+      }
+
+      &:after {
+        content: " „";
+      }
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+  }
+
+  pre,
+  code {
+    background-color: $asphalt;
+    color: $white;
+    border: 0;
+
+    code {
+      font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+    }
+  }
+}
+
+// Post author
+.post-author {
+  margin-top: 2em;
+
+  .post-author-image {
+    max-height: 65px;
+    margin-top: 15px;
+    border-radius: 50%;
+
+    @include responsive(sm) {
+      max-height: 100px;
+      margin-top: 0;
+    }
+  }
+}
+
+// Post share
+.post-share {
+  margin-top: 2em;
+
+  .fa-social {
+    padding-top: .3em;
+    padding-bottom: .8em;
+
+    font-size: 30px; // for the h3
+    color: $lightgray;
+    text-align: center;
+
+    z-index: 1;
+
+    border-bottom: 0;
+    transition: color .3s;
+
+    @include responsive(sm) {
+      font-size: 48px;
+    }
+
+    &:hover {
+      z-index: 2;
+    }
+
+    &.fa-facebook {
+      &:hover {
+        color: $facebook-color;
+      }
+    }
+
+    &.fa-twitter {
+      &:hover {
+        color: $twitter-color;
+      }
+    }
+
+    &.fa-google-plus {
+      &:hover {
+        color: $gplus-color;
+      }
+    }
+
+    &.fa-vk {
+      &:hover {
+        color: $vk-color;
+      }
+    }
+  }
+}
+
+// Comments by disqus
+.post-disqus {
+  margin-top: 2em;
+}

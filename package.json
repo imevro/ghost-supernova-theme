@@ -1,7 +1,7 @@
 {
   "name": "Supernova",
-  "version": "0.1.0",
-  "description": "Eugene Rodionov's theme for Ghost",
+  "version": "0.3.0",
+  "description": "Pure design for Ghost.js",
   "author": {
     "name": "Eugene Rodionov",
     "email": "npm@theaqua.im",
@@ -11,7 +11,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/theaqua/Supernova.ghost.git"
+    "url": "https://github.com/theaqua/Supernova.git"
   },
   "devDependencies": {
     "grunt": "~0.4.2",

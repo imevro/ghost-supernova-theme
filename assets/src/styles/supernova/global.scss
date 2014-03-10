@@ -5,7 +5,8 @@ body {
 
 a {
   color: $blue;
-  transition: all .3s;
+  transition: all .3s, border-bottom-color .3s;
+  border-bottom: 1px solid transparent;
 
   &:hover {
     text-decoration: none;
@@ -13,34 +14,13 @@ a {
   }
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-family: $serif;
 }
 
-h4, h5, h6 {
-  font-weight: 700;
-  font-family: $serif;
-}
-
-// Sticky footer
-html,
-body {
-  height: 100%;
-}
-
-.wrapper {
-  min-height: 100%;
-  height: auto;
-  margin: 0 auto (-($footer-height + $footer-margin)); // Negative indent footer by its height
-  padding-bottom: $footer-height + $footer-margin; // Pad bottom by footer height
-  // padding-bottom: 2em;
-}
-
 .main-footer {
-  height: $footer-height;
   padding: 1em 0;
-  margin-top: $footer-margin;
   border-top: 1px solid $lightgray;
   color: $gray;
 
@@ -51,4 +31,16 @@ body {
       color: $blue;
     }
   }
+}
+
+.home-template,
+.archive-template {
+  .main-footer {
+    margin-top: $footer-margin;
+  }
+}
+
+// InstantClick.io
+#instantclick-bar {
+  background: $blue;
 }

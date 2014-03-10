@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    {{! Document Settings }}
     <meta charset="utf-8">
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    {{! Page Meta }}
     <title>{{meta_title}}</title>
     <meta name="description" content="{{meta_description}}">
 
@@ -16,88 +13,126 @@
 
     <link rel="shortcut icon" href="{{asset "favicon.ico"}}">
 
-    {{! Styles'n'Scripts }}
-    <link rel="stylesheet" href="{{asset "components/normalize-css/normalize.css"}}">
     <link rel="stylesheet" href="{{asset "components/bootstrap/dist/css/bootstrap.min.css"}}">
     <link rel="stylesheet" href="{{asset "components/font-awesome/css/font-awesome.min.css"}}">
+    <link rel="stylesheet" href="{{asset "components/highlightjs/styles/dark.css"}}">
     <link rel="stylesheet" href="{{asset "dist/styles/supernova.css"}}">
-    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400&subset=latin,cyrillic">
 
-    {{! Ghost outputs important style and meta data with this tag }}
-    {{ghost_head}}
+    {{ghost_head}} {{! Ghost outputs important style and meta data with this tag }}
   </head>
   <body class="{{body_class}}">
-    <div class="wrapper">
-      {{! The big featured header on the homepage, with the site logo and description }}
-      <header class="jumbotron blog-cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} id="blog-cover">
-        <div class="blog-cover-overlay">
-          <div class="blog-overlay-links">
-            <a href="{{@blog.url}}" class="blog-link-return fadeInUp">
-              {{#if @blog.logo}}
-                <img src="{{@blog.logo}}" alt="{{@blog.title}}">
-              {{/if}}
-              {{@blog.title}}
-            </a>
-            <a href="{{@blog.url}}/ghost/" class="blog-link-login">
-              <i class="fa fa-lock"></i> My Ghost
-            </a>
-          </div>
-        </div>
-
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-10 col-md-8 col-sm-offset-2 text-center blog-cover-content fadeInUp" id="blog-cover-content">
-              {{#if @blog.logo}}
-                <a class="blog-image" href="{{@blog.url}}" id="blog-image">
-                  <img src="{{@blog.logo}}" alt="{{@blog.title}}">
-                </a>
-              {{/if}}
-              <h1 class="blog-title" id="blog-title">
-                <a href="{{@blog.url}}">
-                  {{@blog.title}}
-                </a>
-              </h1>
-              <p class="blog-subtitle" id="blog-subtitle">{{@blog.description}}</p>
+    <nav class="navbar navbar-supernova fadeInUp" role="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10">
+            <div class="navbar-header">
+              <a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-supernova-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <i class="fa fa-bars"></i>
+              </a>
+              <a class="navbar-brand visible-xs" href="/">
+                {{@blog.title}}
+              </a>
             </div>
+          
+            <div class="collapse navbar-collapse navbar-supernova-collapse">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/about">About</a>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li class="navbar-ghost">
+                  <a href="{{@blog.url}}/ghost/" data-no-instant>
+                    <i class="fa fa-lock"></i> Ghost
+                  </a>
+                </li>
+              </ul>
+            </div>
+
           </div>
         </div>
-      </header>
+      </div> <!-- .container -->
+    </nav>
+
+    <header class="jumbotron blog-cover" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} id="blog-cover">
+      <div class="blog-cover-overlay"></div>
 
       <div class="container">
-        {{{body}}} {{! Everything else gets inserted here }}
-      </div>
-    </div> <!-- .wrapper -->
-
-    <footer class="main-footer">
-      <div class="container">
-        <div class="col-sm-2">
-          <p>
-            <a href="{{@blog.url}}/rss/">
-              <i class="fa fa-rss"></i> RSS
-            </a>
-          </p>
-          <p>
-            <a href="//twitter.com/justusebrain">
-              <i class="fa fa-twitter"></i> justusebrain
-            </a>
-          </p>
+        <div class="row">
+          <div class="col-sm-12 col-lg-8 col-lg-offset-2 text-center blog-cover-content fadeInUp" id="blog-cover-content">
+            {{#if @blog.logo}}
+              <a class="blog-image" href="{{@blog.url}}" id="blog-image">
+                <img src="{{@blog.logo}}" alt="{{@blog.title}}">
+              </a>
+            {{/if}}
+            <h1 class="blog-title" id="blog-title">
+              <a href="{{@blog.url}}">
+                {{@blog.title}}
+              </a>
+            </h1>
+            <p class="blog-subtitle" id="blog-subtitle">{{@blog.description}}</p>
+          </div>
         </div>
-        <div class="col-sm-10 col-lg-8">
-          <p>
-            {{!-- All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved. --}}
-            <a href="{{@blog.url}}/">{{@blog.title}}</a>
-          </p>
-          <p>
-            Proudly published with <a href="http://ghost.org">Ghost</a>, design: <a href="https://github.com/theaqua/Supernova.ghost" title="version 0.2">Supernova</a>.
-          </p>
+      </div>
+    </header>
+
+    <section class="container">
+      {{{body}}}
+    </section>
+
+    <footer class="main-footer fadeInUp">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2">
+            <p>
+              <a href="{{@blog.url}}/rss/">
+                <i class="fa fa-rss"></i> Subscribe
+              </a>
+            </p>
+            <p>
+              <a href="//twitter.com/justusebrain">
+                <i class="fa fa-twitter"></i> justusebrain
+              </a>
+            </p>
+          </div>
+          <div class="col-sm-10 col-lg-8">
+            <p>
+              <a href="{{@blog.url}}/">{{@blog.title}}</a>
+            </p>
+            <p>
+              Proudly published with <a href="http://ghost.org">Ghost</a>, design: <a href="http://theaqua.im/supernova/" title="version 0.3">Supernova</a>.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
 
-    {{! Ghost outputs important scripts and data with this tag }}
-    {{ghost_foot}}
+    {{ghost_foot}} {{! Ghost outputs important scripts and data with this tag }}
 
-    {{! The main JavaScript file for Supernova }}
+    <script src="{{asset "components/instantclick/instantclick.js"}}" data-no-instant></script>
+    <script src="{{asset "components/highlightjs/highlight.pack.js"}}"></script>
+    <script src="{{asset "components/bootstrap/js/transition.js"}}"></script>
+    <script src="{{asset "components/bootstrap/js/collapse.js"}}"></script>
     <script src="{{asset "dist/scripts/supernova.js"}}"></script>
+    <script data-no-instant>
+      hljs.initHighlightingOnLoad();
+      InstantClick.init();
+    </script>
+    {{#if post}}
+    <script>
+      var disqus_shortname = "theaqua"; // required: replace example with your forum shortname
+
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    {{/if}}
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=PT+Serif:400,700,400italic|Open+Sans&subset=latin,cyrillic">
   </body>
 </html>

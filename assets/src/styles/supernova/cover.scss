@@ -4,50 +4,7 @@
   background-position: center;
   background-size: cover;
   border-bottom: 1px solid $lightgray;
-  
-  .blog-cover-overlay {
-    a {
-      text-shadow: none;
-      font-family: $sans-serif;
-      font-size: .7em;
-      display: block;
-    }
-
-    .blog-link-return {
-      display: none;
-
-      position: absolute;
-      top: 1em;
-      left: 3em;
-
-      color: $white;
-
-      &:hover {
-        color: darken($white, 10%);
-      }
-
-      @include responsive(sm) {
-        left: 1em;
-      }
-    }
-
-    .blog-link-login {
-      opacity: 0;
-      display: none;
-
-      position: absolute;
-      top: 1.5em;
-      right: 3em;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      @include responsive(sm) {
-        display: block;
-      }
-    }
-  }
+  margin-bottom: 1em;
 
   &, h1 {
     font-family: $sans-serif;
@@ -55,12 +12,10 @@
   }
 
   a {
-    color: $black;
+    border: 0;
 
     &:hover {
       text-decoration: none;
-      color: $asphalt;
-      border: 0;
     }
   }
 
@@ -68,8 +23,12 @@
     display: block;
 
     img {
-      max-height: 200px;
+      max-height: 100px;
       border-radius: 50%;
+
+      @include responsive(sm) {
+        max-height: 200px;
+      }
     }
   }
 
@@ -77,6 +36,7 @@
     color: $white;
     position: relative;
     padding-top: 3em;
+    margin-top: 0;
 
     @include responsive(sm) {
       padding: 10em 0 5em 0;
@@ -95,19 +55,6 @@
       right: 0;
 
       background-color: rgba(0, 0, 0, 0.3);
-
-      .blog-link-return {
-        display: block;
-
-        img {
-          max-width: 50px;
-          border-radius: 50%;
-        }
-      }
-
-      .blog-link-login {
-        color: $white;
-      }
     }
 
     .blog-cover-content {

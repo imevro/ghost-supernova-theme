@@ -13,13 +13,15 @@
 @import "supernova/experiments";
 @import "supernova/global";
 @import "supernova/cover";
+@import "supernova/navbar";
 
-@import "ghost/ghost";
+@import "ghost/post";
+@import "ghost/pagination";
 
 // Experiments
 .fadeInUp {
   animation-name: fadeInUp;
   animation-fill-mode: both;
-  animation-delay: .4s;
-  animation-duration: .4s;
+  animation-delay: .3s;
+  animation-duration: .3s;
 }
