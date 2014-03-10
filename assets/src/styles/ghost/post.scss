@@ -21,7 +21,11 @@
 .post-meta {
   color: $gray;
   font-family: $serif;
-  text-align: right;
+  text-align: left;
+
+  @include responsive(lg) {
+    text-align: right;
+  }
 }
 
 .post-title {
