@@ -1,6 +1,5 @@
-##  Supernova
+## [Supernova](http://theaqua.im/supernova)
 Pure design for Ghost.js.
-
 Current version: 0.3
 
 Started as [Starter.ghost](https://github.com/theaqua/Starter.ghost)
