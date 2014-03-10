@@ -24,7 +24,6 @@
     "grunt-contrib-coffee": "~0.7.0",
     "grunt-sass": "",
     "grunt-autoprefixer": "",
-    "grunt-usemin": "",
     "grunt-concurrent": "~0.3.0"
   }
 }
