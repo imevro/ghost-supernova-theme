@@ -1,0 +1,17 @@
+//
+// Mixins
+//
+@mixin responsive($media) {
+  @if $media == sm {
+    @media (min-width: 768px) { @content; }
+  }
+  @else if $media == md {
+    @media (min-width: 992px) { @content; }
+  }
+  @else if $media == lg {
+    @media (min-width: 1200px) { @content; }
+  }
+  @else if $media == xlg {
+    @media (min-width: 1700px) { @content; }
+  }
+}

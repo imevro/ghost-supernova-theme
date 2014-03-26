@@ -1,0 +1,45 @@
+.navbar-supernova {
+  background: transparent;
+  padding-top: 1em;
+  margin-bottom: 2em;
+  border: 0;
+  z-index: 2;
+
+  .navbar-brand,
+  .navbar-toggle {
+    border: 0;
+  }
+
+  .nav {
+    font-size: 18px;
+
+    > li {
+      > a {
+        border: 0;
+
+        &:hover,
+        &:focus {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .navbar-ghost {
+    margin-right: -82px;
+    opacity: 0;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.post-template {
+  .covered {
+    .navbar-supernova {
+      margin-bottom: 15em;
+    }
+  }
+}
