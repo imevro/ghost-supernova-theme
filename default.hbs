@@ -21,63 +21,57 @@
     {{ghost_head}} {{! Ghost outputs important style and meta data with this tag }}
   </head>
   <body class="{{body_class}}">
-    <nav class="navbar navbar-supernova fadeInUp" role="navigation">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-10">
-            <div class="navbar-header">
-              <a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-supernova-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <i class="fa fa-bars"></i>
-              </a>
-              <a class="navbar-brand visible-xs" href="/">
-                {{@blog.title}}
-              </a>
-            </div>
-          
-            <div class="collapse navbar-collapse navbar-supernova-collapse">
-              <ul class="nav navbar-nav">
-                <li>
-                  <a href="/">Home</a>
-                </li>
-                <li>
-                  <a href="/about">About</a>
-                </li>
-              </ul>
-              <ul class="nav navbar-nav navbar-right">
-                <li class="navbar-ghost">
-                  <a href="{{@blog.url}}/ghost/" data-no-instant>
-                    <i class="fa fa-lock"></i> Ghost
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div> <!-- .container -->
-    </nav>
-
-    <header class="jumbotron blog-cover {{#if @blog.cover}}blog-has-cover{{/if}}" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} id="blog-cover">
+    <header class="jumbotron blog-cover {{#if @blog.cover}}covered{{/if}}" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}} id="blog-cover">
       <div class="blog-cover-overlay"></div>
 
       <div class="container">
+        <nav class="navbar navbar-supernova fadeInUp" role="navigation">
+          <div class="row">
+            <div class="col-lg-10">
+              <div class="navbar-header">
+                <a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-supernova-collapse">
+                  <span class="sr-only">Toggle navigation</span>
+                  <i class="fa fa-bars"></i>
+                </a>
+                <a class="navbar-brand visible-xs" href="/">
+                  {{@blog.title}}
+                </a>
+              </div>
+            
+              <div class="collapse navbar-collapse navbar-supernova-collapse">
+                <ul class="nav navbar-nav pull-right">
+                  <li>
+                    <a href="/">Home</a>
+                  </li>
+                  <li>
+                    <a href="/about">About</a>
+                  </li>
+                  <li class="navbar-ghost">
+                    <a href="{{@blog.url}}/ghost/" data-no-instant>
+                      <i class="fa fa-lock"></i> Ghost
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </nav>
+
         <div class="row">
-          <div class="col-sm-12 col-lg-8 col-lg-offset-2 text-center blog-cover-content fadeInUp" id="blog-cover-content">
+          <div class="col-sm-12 col-lg-8 col-lg-offset-2 text-center fadeInUp" id="blog-cover-content">
             {{#if @blog.logo}}
-              <a class="blog-image" href="{{@blog.url}}" id="blog-image">
-                <img src="{{@blog.logo}}" alt="{{@blog.title}}">
-              </a>
+              <img src="{{@blog.logo}}" alt="{{@blog.title}}" class="blog-image" id="blog-image">
             {{/if}}
             <h1 class="blog-title" id="blog-title">
               <a href="{{@blog.url}}">
                 {{@blog.title}}
               </a>
             </h1>
-            <p class="blog-subtitle" id="blog-subtitle">{{@blog.description}}</p>
+            <p class="lead" id="blog-subtitle">{{@blog.description}}</p>
           </div>
         </div>
-      </div>
+      </div> <!-- .container -->
     </header>
 
     <section class="container">

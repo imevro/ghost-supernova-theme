@@ -1,15 +1,13 @@
 //
 //  Supernova
 //  Includes:
-//    * mixins.scss: useful mixins
 //    * /ghost: ghost overrides
 //    * /supernova: main supernova styles
 //  Author: Eugene Rodionov
 //
 
-@import "mixins";
-
 @import "supernova/variables";
+@import "supernova/mixins";
 @import "supernova/experiments";
 @import "supernova/global";
 @import "supernova/cover";
