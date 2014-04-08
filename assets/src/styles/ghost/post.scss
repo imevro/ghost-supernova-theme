@@ -3,13 +3,13 @@
 
   .fa-star {
     display: none;
-    color: $gold;
+    color: $brand-gold;
   }
 
   &.featured {
     .post-title {
       a {
-        color: $gold;
+        color: $brand-gold;
       }
       .fa-star {
         display: inline;
@@ -19,8 +19,8 @@
 }
 
 .post-meta {
-  color: $gray;
-  font-family: $serif;
+  color: $gray-light;
+  font-family: $font-family-serif;
   text-align: left;
 
   @include responsive(lg) {
@@ -38,7 +38,7 @@
 
 // Post
 .post-content {
-  font-family: $serif;
+  font-family: $font-family-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
@@ -80,7 +80,7 @@
   
   img {
     max-width: 100%;
-    border: 1px solid $lightgray;
+    border: 1px solid $gray-lighter;
     margin: 1em 0;
 
     &[alt="no-border"] {
@@ -117,7 +117,7 @@
 
   blockquote {
     margin-left: -25px;
-    border-color: $blue;
+    border-color: $brand-primary;
     border-width: .2em;
     font-style: italic;
 
@@ -146,8 +146,8 @@
 
   pre,
   code {
-    background-color: $asphalt;
-    color: $white;
+    background-color: $brand-asphalt;
+    color: #fff;
     border: 0;
 
     code {
@@ -181,7 +181,7 @@
     padding-bottom: .8em;
 
     font-size: 30px; // for the h3
-    color: $lightgray;
+    color: $gray-lighter;
     text-align: center;
 
     z-index: 1;
@@ -199,25 +199,25 @@
 
     &.fa-facebook {
       &:hover {
-        color: $facebook-color;
+        color: $brand-facebook;
       }
     }
 
     &.fa-twitter {
       &:hover {
-        color: $twitter-color;
+        color: $brand-twitter;
       }
     }
 
     &.fa-google-plus {
       &:hover {
-        color: $gplus-color;
+        color: $brand-gplus;
       }
     }
 
     &.fa-vk {
       &:hover {
-        color: $vk-color;
+        color: $brand-vk;
       }
     }
   }

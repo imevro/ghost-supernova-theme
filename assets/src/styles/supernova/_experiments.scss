@@ -17,3 +17,10 @@
     transform: translateY();
   }
 }
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-fill-mode: both;
+  animation-delay: .3s;
+  animation-duration: .3s;
+}

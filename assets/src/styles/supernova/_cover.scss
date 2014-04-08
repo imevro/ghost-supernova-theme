@@ -1,16 +1,16 @@
 // Header
 .blog-cover {
-  background-color: $white;
+  background-color: #fff;
   background-position: center;
   background-size: cover;
-  border-bottom: 1px solid $lightgray;
+  border-bottom: 1px solid $gray-lighter;
   margin-bottom: 1em;
   position: relative;
   padding: 0 0 30px 0;
   font-size: inherit;
 
   &, h1 {
-    font-family: $sans-serif;
+    font-family: $font-family-sans-serif;
     font-weight: 400;
   }
 
@@ -43,7 +43,7 @@
   }
 
   &.covered {
-    color: $white;
+    color: #fff;
 
     @include responsive(sm) {
       padding-bottom: 5em;
@@ -53,14 +53,14 @@
       border-bottom: 1px solid transparent;
 
       &:hover {
-        border-bottom-color: $white;
-        color: $lightgray;
+        border-bottom-color: #fff;
+        color: $gray-lighter;
       }
     }
 
     &, a {
-      color: $white;
-      text-shadow: 1px 1px 1px $black;
+      color: #fff;
+      text-shadow: 1px 1px 1px #111;
     }
 
     .blog-cover-overlay {
@@ -73,7 +73,7 @@
   .covered {
     .blog-title {
       text-align: left;
-      font-family: $serif;
+      font-family: $font-family-serif;
     }
   }
 }
