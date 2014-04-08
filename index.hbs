@@ -24,10 +24,14 @@
           </h3>          
 
           <p class="post-excerpt">
-            {{excerpt}}…
-            <a href="{{url}}">
-              continue reading <i class="fa fa-angle-right"></i>
-            </a>
+            {{#has tag="quote, photo, picture, video, story"}}
+              {{content}}
+            {{else}}
+              {{excerpt}}…
+              <a href="{{url}}">
+                continue reading <i class="fa fa-angle-right"></i>
+              </a>
+            {{/has}}
           </p>
         </div>
       </div>

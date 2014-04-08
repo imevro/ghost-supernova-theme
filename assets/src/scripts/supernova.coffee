@@ -6,9 +6,6 @@ Main JS file for Supernova behaviours
 postCover = $("img[alt='image-cover']")
 blogCover = $("#blog-cover")
 
-$(".newer-posts").html("<i class='fa fa-angle-left'></i> Newer posts")
-$(".older-posts").html("Older posts <i class='fa fa-angle-right'></i>")
-
 if postCover.length > 0
   # Replace old content
   $("#blog-image").hide()
@@ -19,10 +16,12 @@ if postCover.length > 0
   # Add image and class .covered
   blogCover.css("background-image", "url(#{postCover.attr('src')})").addClass "covered"
 
-hljs.initHighlightingOnLoad()
-
-InstantClick.on "change", ->
-  $("pre code").each (i, e) ->
-    hljs.highlightBlock e
-
+disqus_shortname = "theaqua" # required: replace example with your forum shortname
+(->
+  dsq = document.createElement("script")
+  dsq.type = "text/javascript"
+  dsq.async = true
+  dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js"
+  (document.getElementsByTagName("head")[0] or document.getElementsByTagName("body")[0]).appendChild dsq
   return
+)()
