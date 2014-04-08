@@ -26,9 +26,12 @@
   }
 
   .navbar-ghost {
-    margin-right: -82px;
     opacity: 0;
     transition: opacity .3s;
+
+    @include responsive(md) {
+      margin-right: -82px;
+    }
 
     &:hover {
       opacity: 1;
