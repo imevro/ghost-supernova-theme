@@ -102,17 +102,18 @@
   }
 
   .gallery {
+    margin-bottom: 1em;
+
     .col-sm-3,
     .col-sm-6,
     .col-sm-9 {
       padding: 0;
-
-      &:hover {
-        border: 0;
-      }
+      border-bottom: 0;
     }
 
-    margin-bottom: 1em;
+    img {
+      margin: 0;
+    }
   }
 
   blockquote {
