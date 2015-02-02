@@ -1,0 +1,26 @@
+// Global & type
+body {
+  font-family: $sans-serif;
+}
+
+a {
+  color: $brand-primary;
+  transition: all .3s, border-bottom-color .3s;
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    text-decoration: none;
+    border-bottom: 1px solid;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-family: $serif;
+}
+
+
+// InstantClick.io
+#instantclick-bar {
+  background: $brand-primary;
+}

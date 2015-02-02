@@ -1,0 +1,35 @@
+// Header
+.blog-cover {
+  // border-bottom: 1px solid $lightgray;
+  margin-bottom: 1em;
+  font-family: $serif;
+  font-size: 2em;
+
+  &-title {
+    font-size: 2em;
+    font-weight: 400;
+  }
+
+  a {
+    border: 0;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &-wrapper {
+    display: block;
+
+    &-image {
+      height: 100px;
+      width: 100px;
+      border-radius: 50%;
+
+      @include responsive(sm) {
+        height: 200px;
+        width: 200px;
+      }
+    }
+  }
+}

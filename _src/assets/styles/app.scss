@@ -1,0 +1,112 @@
+//
+//  Supernova
+//  Includes:
+//    * mixins.scss: useful mixins
+//    * /ghost: ghost overrides
+//    * /supernova: main supernova styles
+//  Author: Eugene Rodionov
+//
+
+@import "supernova/variables";
+@import "mixins";
+@import "../components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "vendor/hljs";
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin-bottom: -($footer-height);
+
+  &:after {
+    content: "";
+    display: block;
+  }
+}
+
+.footer-global,
+.wrapper:after {
+  height: $footer-height;
+}
+
+.footer-global {
+  padding: 1em 0;
+  border-top: 1px solid $gray-lighter;
+  color: lighten($gray-light, 20%);
+}
+
+.navbar {
+  &-supernova {
+    padding-bottom: 3em;
+    margin-bottom: 0;
+    z-index: 1;
+    background: rgb(85, 164, 242) no-repeat center center;
+    background-size: cover;
+    border: 0;
+    border-radius: 0;
+
+    &-covered {
+      padding-top: 20em;
+
+      .navbar-collapse {
+        background-color: rgba(0,0,0,0.4);
+      }
+    }
+
+    .nav {
+      > li {
+        > a {
+          padding: 1em 1.5em;
+          color: #fff;
+
+          &:hover {
+            color: $brand-primary;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &-collapse {
+    padding: 0;
+  }
+
+  &-right {
+    margin-right: 0;
+  }
+
+  &-ghost {
+    opacity: 0;
+    transition: opacity .3s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+
+.panel-supernova {
+  margin-top: -3.18em;
+  position: relative;
+  z-index: 2;
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+}
+
+
+
+
+
+
+@import "supernova/experiments";
+@import "supernova/global";
+@import "supernova/cover";
+@import "supernova/navbar";
+
+@import "ghost/post";
+@import "ghost/pagination";
