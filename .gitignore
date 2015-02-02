@@ -1,4 +1,3 @@
 node_modules
-assets/components
-assets/dist
+_src/assets/components
 .DS_Store
