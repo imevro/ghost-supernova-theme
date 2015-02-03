@@ -1,2 +1,1 @@
-hljs.initHighlightingOnLoad();
 InstantClick.init();

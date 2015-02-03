@@ -40,7 +40,7 @@
               </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li class="navbar-ghost"><a href="{{@blog.url}}/ghost">Ghost</a></li>
+              <li class="navbar-ghost"><a href="{{@blog.url}}/ghost" data-no-instant>Ghost</a></li>
             </ul>
           </div>
         </div>
@@ -73,7 +73,7 @@
         <div class="row">
           <div class="col-xs-12">
             <p>
-              <a href="{{@blog.url}}/rss/">RSS</a> of <a href="{{@blog.url}}/">{{@blog.title}}</a>.
+              <a href="{{@blog.url}}/rss/" data-no-instant>RSS</a> of <a href="{{@blog.url}}/">{{@blog.title}}</a>.
             </p>
             <p>
               Proudly published with <a href="http://ghost.org">Ghost</a>, design: <a href="http://theaqua.im/supernova/" title="version 0.5.8">Supernova</a>.
@@ -86,12 +86,10 @@
     {{ghost_foot}} {{! Ghost outputs important scripts and data with this tag }}
 
     <script src="{{asset "scripts/supernova.js"}}"></script>
-    <script data-no-instant>
-      hljs.initHighlightingOnLoad();
-      InstantClick.init();
-    </script>
     {{#if post}}
     <script>
+      hljs.initHighlightingOnLoad();
+
       var disqus_shortname = "techdtrussia"; // required: replace example with your forum shortname
 
       (function() {
